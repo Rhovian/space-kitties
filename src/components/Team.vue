@@ -59,5 +59,11 @@ import Stars from "./Stars.vue";
 }
 .team-inner-wrapper {
   padding: 2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
 }
 </style>

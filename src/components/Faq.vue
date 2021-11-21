@@ -75,5 +75,6 @@ import Stars from "./Stars.vue";
 .faq-text {
   font-family: "Orbitron", sans-serif;
   font-size: 0.8em;
+  text-align: center;
 }
 </style>
