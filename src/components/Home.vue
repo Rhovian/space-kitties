@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import Landing from './Landing.vue'
-import Stars from './Stars.vue';
+import Landing from "./Landing.vue";
+import Stars from "./Stars.vue";
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

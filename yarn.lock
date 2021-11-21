@@ -7025,7 +7025,7 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
-"prettier@^1.18.2 || ^2.0.0":
+prettier@2.4.1, "prettier@^1.18.2 || ^2.0.0":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
   integrity sha512-9fbDAXSBcc6Bs1mZrDYb3XKzDLm4EXXL9sC1LqKP5rZkT6KRr/rf9amVUcODVXgguK/isJz0d0hP72WeaKWsvA==
@@ -8701,6 +8701,11 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vue-aos@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vue-aos/-/vue-aos-2.3.0.tgz#acd59619f2d5472ec73fbe300e7d4bf06f60b51d"
+  integrity sha512-iYJklZtqFZj+C87LL/Q0TLDsSlotMRCYD412m2bUP95juZ2grChp3s9q7nvw6hSapZvw7oe2YBiX8/A/YyuDOA==
 
 vue-class-component@^8.0.0-0:
   version "8.0.0-rc.1"

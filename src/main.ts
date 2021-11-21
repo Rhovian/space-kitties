@@ -1,4 +1,6 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import App from "./App.vue";
+// @ts-ignore
+import * as VueAos from "vue-aos";
 
-createApp(App).mount('#app')
+createApp(App).use(VueAos).mount("#app");
