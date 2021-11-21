@@ -64,6 +64,5 @@ import Stars from "./Stars.vue";
   align-items: center;
   flex-direction: column;
   width: 100%;
-
 }
 </style>
