@@ -1,6 +1,6 @@
 <template>
   <div class="navbar-wrapper">
-    <button>Mint</button>
+    <button>Connect</button>
   </div>
 </template>
 

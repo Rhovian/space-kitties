@@ -31,7 +31,7 @@ import Stars from "./Stars.vue";
 
 .about-wrapper {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: transparent;
   padding: 0.5em 0;
   display: flex;

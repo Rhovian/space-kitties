@@ -122,7 +122,7 @@ import Stars from "./Stars.vue";
 }
 /** from solomon */
 .roadmap {
-  margin: 10% 0px;
+  margin: 5em 0px;
 }
 
 .roadmap h2 {
@@ -188,7 +188,6 @@ Main components
   position: relative;
   padding: 2em 0;
   margin-top: 2em;
-  margin-bottom: 2em;
 }
 #cd-timeline::before {
   content: "";

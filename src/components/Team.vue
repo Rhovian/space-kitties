@@ -1,7 +1,7 @@
 <template>
   <div class="team-wrapper">
     <div class="team-content-wrapper">
-      <h2 class="lore-title">Meet the Team</h2>
+      <h2 class="team-title">Meet the Team</h2>
       <div class="team-inner-wrapper">
         <img class="about-img" src="../assets/sk_8.png" alt="" />
         <div class="team-text">Team member 1</div>
@@ -49,6 +49,13 @@ import Stars from "./Stars.vue";
   font-family: "Orbitron", sans-serif;
   font-size: 1em;
   text-align: center;
+}
+.team-title {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  line-height: 30px;
+  color: #92d3cd;
+  width: 100%;
 }
 .team-inner-wrapper {
   padding: 2em 0;
