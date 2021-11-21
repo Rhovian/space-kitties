@@ -1,13 +1,11 @@
 <template>
   <div class="home">
-    <Navbar />
     <Landing />
     <Stars />
   </div>
 </template>
 
 <script setup lang="ts">
-import Navbar from './Navbar.vue';
 import Landing from './Landing.vue'
 import Stars from './Stars.vue';
 </script>

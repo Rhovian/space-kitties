@@ -8,7 +8,7 @@
 
 <style>
     .navbar-wrapper {
-        width: 100%;
+        width: 95%;
         height: 12.5%;
         max-height: 80px;
         position: fixed;
