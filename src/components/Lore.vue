@@ -69,4 +69,43 @@ import Stars from "./Stars.vue";
   width: 90%;
   padding: 1em;
 }
+@media screen and (min-width: 600px) {
+  .lore-text {
+    font-size: 1.25em;
+  }
+  .lore-title {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+}
+/** desktop */
+@media screen and (min-width: 1200px) {
+  .lore-img {
+    width: 75%;
+  }
+  .lore-title {
+    font-size: 2.5em;
+  }
+  .lore-text {
+    font-size: 1.75em;
+  }
+}
+/** desktop */
+@media screen and (min-width: 1600px) {
+  .lore-img {
+    width: 65%;
+  }
+}
+/** desktop */
+@media screen and (min-width: 1900px) {
+  .lore-img {
+    width: 60%;
+  }
+  .lore-title {
+    font-size: 3.25em;
+  }
+  .lore-text {
+    font-size: 2.25em;
+  }
+}
 </style>

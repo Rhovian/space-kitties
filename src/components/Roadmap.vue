@@ -327,8 +327,8 @@ Main components
     color: white;
     margin-left: 0;
     padding: 1.6em;
-    width: 40%;
-    margin: 0 5%;
+    width: 60%;
+    margin: 0 -30%;
   }
   .cd-timeline-content::before {
     top: 24px;
@@ -414,4 +414,77 @@ Main components
     width: 20%;
   }
 }
+/* end of solomon stuff */
+/** general media queries */
+@media screen and (min-width: 600px) {
+  .roadmap-title {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+  .cd-timeline-content {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .cd-timeline-content {
+    max-width: 550px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .cd-timeline-content {
+    max-width: 700px;
+  }
+}
+
+/** desktop */
+@media screen and (min-width: 1200px) {
+  .faq-title {
+    font-size: 2.5em;
+  }
+  .faq-text {
+    font-size: 1.75em;
+  }
+  .faq-header {
+    font-size: 3.25em;
+  }
+}
+
+/** desktop */
+@media screen and (min-width: 1500px) {
+  .roadmap-title {
+    font-size: 3.25em;
+    line-height: 1.5em;
+  }
+  .cd-timeline-content h2 {
+    font-size: 2em;
+  }
+  .cd-timeline-content p {
+    font-size: 1.5em;
+  }
+}
+/** desktop */
+@media screen and (min-width: 1900px) {
+  .roadmap-title {
+    font-size: 3.25em;
+  }
+  .cd-timeline-content h2 {
+    font-size: 2.5em;
+  }
+  .cd-timeline-content p {
+    font-size: 2em;
+  }
+  .cd-timeline-content {
+    max-width: 850px;
+    width: 70%;
+    margin: 0 -40%;
+  }
+  .cd-timeline-img {
+    height: 60px;
+    width: 60px;
+    left: 48%;
+  }
+
+}
+
 </style>

@@ -29,4 +29,9 @@
 .logo {
   width: 100%;
 }
+@media screen and (min-width: 1000px) {
+  .logo {
+    width: 75%;
+  }
+}
 </style>

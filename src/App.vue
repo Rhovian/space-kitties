@@ -26,4 +26,24 @@ body {
   padding: 0 0.75em;
   background: black;
 }
+@media screen and (min-width: 600px) {
+  body {
+    padding: 0 1em;
+  }
+}
+@media screen and (min-height: 600px) and (min-width: 950px) {
+  body {
+    padding: 0 2em;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    padding: 0 3em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  body {
+    padding: 0 5em;
+  }
+}
 </style>

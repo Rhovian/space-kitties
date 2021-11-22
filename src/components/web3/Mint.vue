@@ -21,6 +21,7 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   font-family: "Press Start 2P", cursive;
+  margin-top: 1em;
 
   padding: 13px 35px 10px 35px;
   border-radius: 100px;
@@ -100,4 +101,11 @@ button:hover {
 
   background-color: rgba(255, 255, 255, 0.25);
 }
+@media screen and (min-width: 1500px) {
+  button {
+    font-size: 2em;
+    padding: 16px 38px 13px 38px;
+  }
+}
+
 </style>

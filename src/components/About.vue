@@ -14,7 +14,7 @@
         roadmap unlocks.
       </div>
     </div>
-    <div class="about-content-wrapper">
+    <div class="about-content-wrapper about-img-wrapper">
       <img class="about-img" src="../assets/sk_8.png" alt="" />
     </div>
     <Stars />
@@ -50,11 +50,15 @@ import Stars from "./Stars.vue";
   width: 100%;
   color: white;
 }
+.about-img-wrapper {
+  align-items: center;
+}
 .about-title {
   font-family: "Press Start 2P", cursive;
   text-align: center;
   line-height: 30px;
   color: #92d3cd;
+  width: 100%;
 }
 .about-text {
   font-family: "Orbitron", sans-serif;
@@ -63,5 +67,49 @@ import Stars from "./Stars.vue";
 .about-img {
   width: 90%;
   padding: 1em;
+}
+/** tablet portrait */
+@media screen and (min-width: 600px) {
+  .about-text {
+    font-size: 1.25em;
+  }
+  .about-title {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+}
+/** tablet landscape */
+@media screen and (min-height: 600px) and (min-width: 950px) {
+}
+/** desktop */
+@media screen and (min-width: 1200px) {
+  .about-img {
+    width: 75%;
+  }
+  .about-title {
+    font-size: 2.5em;
+  }
+  .about-text {
+    font-size: 1.75em;
+  }
+}
+
+/** desktop */
+@media screen and (min-width: 1600px) {
+  .about-img {
+    width: 65%;
+  }
+}
+/** desktop */
+@media screen and (min-width: 1900px) {
+  .about-img {
+    width: 65%;
+  }
+  .about-title {
+    font-size: 3.25em;
+  }
+  .about-text {
+    font-size: 2.25em;
+  }
 }
 </style>

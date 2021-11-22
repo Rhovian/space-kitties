@@ -2,21 +2,23 @@
   <div class="team-wrapper">
     <div class="team-content-wrapper">
       <h2 class="team-title">Meet the Team</h2>
-      <div class="team-inner-wrapper">
-        <img class="about-img" src="../assets/sk_8.png" alt="" />
-        <div class="team-text">Team member 1</div>
-      </div>
-      <div class="team-inner-wrapper">
-        <img class="about-img" src="../assets/sk_8.png" alt="" />
-        <div class="team-text">Team member 2</div>
-      </div>
-      <div class="team-inner-wrapper">
-        <img class="about-img" src="../assets/sk_8.png" alt="" />
-        <div class="team-text">Team member 3</div>
-      </div>
-      <div class="team-inner-wrapper">
-        <img class="about-img" src="../assets/sk_8.png" alt="" />
-        <div class="team-text">Team member 4</div>
+      <div class="team-content-inner-wrapper">
+        <div class="team-inner-wrapper">
+          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <div class="team-text">Team member 1</div>
+        </div>
+        <div class="team-inner-wrapper">
+          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <div class="team-text">Team member 2</div>
+        </div>
+        <div class="team-inner-wrapper">
+          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <div class="team-text">Team member 3</div>
+        </div>
+        <div class="team-inner-wrapper">
+          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <div class="team-text">Team member 4</div>
+        </div>
       </div>
     </div>
     <Stars />
@@ -64,5 +66,49 @@ import Stars from "./Stars.vue";
   align-items: center;
   flex-direction: column;
   width: 100%;
+}
+.team-content-inner-wrapper {
+  width: 100%;
+}
+/** general media queries */
+@media screen and (min-width: 601px) {
+  .team-text {
+    font-size: 1.25em;
+  }
+  .team-title {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+}
+/** desktop */
+@media screen and (min-width: 1200px) {
+  .team-img {
+    width: 75%;
+  }
+  .team-title {
+    font-size: 3.25em;
+  }
+  .team-text {
+    font-size: 1.75em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .team-text {
+    font-size: 2.5em;
+    padding-top: 1em;
+  }
+  .team-content-inner-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .team-inner-wrapper {
+    width: 40%;
+  }
+  .team-img {
+    width: 100%;
+  }
 }
 </style>
