@@ -70,6 +70,9 @@ import Stars from "./Stars.vue";
 .team-content-inner-wrapper {
   width: 100%;
 }
+.team-img {
+  width: 100%;
+}
 /** general media queries */
 @media screen and (min-width: 601px) {
   .team-text {
