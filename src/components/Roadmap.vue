@@ -484,7 +484,5 @@ Main components
     width: 60px;
     left: 48%;
   }
-
 }
-
 </style>
