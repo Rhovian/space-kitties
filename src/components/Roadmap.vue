@@ -118,7 +118,10 @@ import Stars from "./Stars.vue";
   background: transparent;
   z-index: 10;
   position: relative;
-}
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0 0.75em;
+  }
 .roadmap-content-wrapper {
   display: flex;
   justify-content: center;

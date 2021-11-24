@@ -80,7 +80,9 @@ import Stars from "./Stars.vue";
   background: transparent;
   z-index: 10;
   position: relative;
-  padding-bottom: 5em;
+  padding: 0 0.75em 5em 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 .faq-content-wrapper {
   display: flex;
@@ -90,6 +92,9 @@ import Stars from "./Stars.vue";
   height: 100%;
   width: 100%;
   color: white;
+}
+.faq-inner-content-wrapper {
+  padding: 0 0.75em;
 }
 .faq-title {
   font-family: "Press Start 2P", cursive;

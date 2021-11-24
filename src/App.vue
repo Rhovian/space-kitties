@@ -27,12 +27,6 @@ body {
   background: black;
   margin: 0;
 }
-.app-inner-wrapper {
-  margin: 0;
-  overflow-x: hidden;
-  padding: 0 0.75em;
-  background: black;
-}
 .app-footer-wrapper {
   position: relative;
   height: 25vh;

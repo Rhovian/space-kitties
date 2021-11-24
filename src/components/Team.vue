@@ -36,6 +36,10 @@ import Stars from "./Stars.vue";
   background: transparent;
   z-index: 10;
   position: relative;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0 0.75em;
+  background: black;
 }
 .team-content-wrapper {
   display: flex;
@@ -59,6 +63,8 @@ import Stars from "./Stars.vue";
   line-height: 30px;
   color: #92d3cd;
   width: 100%;
+  filter: drop-shadow(0 0 0.75rem #92d3cd);
+
 }
 .team-inner-wrapper {
   padding: 2em 0;
@@ -72,13 +78,15 @@ import Stars from "./Stars.vue";
   width: 100%;
 }
 .team-img {
-  width: 85%;
+  width: 75%;
 }
 .team-text {
   font-size: 1.15em;
   padding: 0.5em 1em;
   text-align: center;
   letter-spacing: 2px;
+  filter: drop-shadow(0 0 0.75rem #92d3cd);
+
 }
 /** general media queries */
 @media screen and (min-width: 601px) {

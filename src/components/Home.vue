@@ -18,5 +18,7 @@ import Stars from "./Stars.vue";
   background: transparent;
   position: relative;
   z-index: 10;
+  margin: 0;
+  overflow-x: hidden;
 }
 </style>

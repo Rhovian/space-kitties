@@ -26,14 +26,6 @@
         dominant villains of their story.
       </div>
     </div>
-    <div class="lore-content-wrapper">
-      <img
-        class="about-img"
-        src="../assets/sk_6.png"
-        alt=""
-        data-aos="fade-down"
-      />
-    </div>
     <Stars />
   </div>
 </template>
