@@ -44,6 +44,7 @@ import Stars from "./Stars.vue";
   background: transparent;
   z-index: 10;
   position: relative;
+  padding-top: 2.5em;
 }
 .lore-content-wrapper {
   display: flex;
