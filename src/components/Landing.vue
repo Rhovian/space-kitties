@@ -2,7 +2,7 @@
   <div class="landing-wrapper">
     <div class="landing-inner-wrapper">
       <div class="landing-content-wrapper">
-        <img class="logo" src="../assets/ga.png" alt="" />
+        <img class="logo" data-aos="fade-in" src="../assets/ga.png" alt="" />
       </div>
     </div>
   </div>

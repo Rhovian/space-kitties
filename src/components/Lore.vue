@@ -1,8 +1,8 @@
 <template>
   <div class="lore-wrapper">
     <div class="lore-content-wrapper">
-      <h2 class="lore-title">Lore</h2>
-      <div class="lore-text">
+      <h2 class="lore-title" data-aos="fade-right">Lore</h2>
+      <div class="lore-text" data-aos="fade-left">
         In a metaverse far far away the ongoing battle between decentralized
         good and evil has torn space time apart, splitting and fusing realities
         together. Wormholes have formed as a result of the intense fighting and
@@ -10,7 +10,7 @@
         transported into our universe.
       </div>
       <br />
-      <div class="lore-text">
+      <div class="lore-text" data-aos="fade-left">
         After careful observation, Earth authorities have categorized each
         villain by their ‘Disaster Rank’ ranging from C to SSS. Authorities have
         also labelled these villains to be extremely disruptive to society and
@@ -18,7 +18,7 @@
         be captured, dead or alive.
       </div>
       <br />
-      <div class="lore-text">
+      <div class="lore-text" data-aos="fade-left">
         Equipped with their own unique stat sheets, equipment and weapons, each
         and every Villain has an undeniable thirst for power. To increase their
         own stats and rank Villains seek out and complete missions throughout
@@ -27,7 +27,12 @@
       </div>
     </div>
     <div class="lore-content-wrapper">
-      <img class="about-img" src="../assets/sk_6.png" alt="" />
+      <img
+        class="about-img"
+        src="../assets/sk_6.png"
+        alt=""
+        data-aos="fade-down"
+      />
     </div>
     <Stars />
   </div>
@@ -60,7 +65,7 @@ import Stars from "./Stars.vue";
   text-align: center;
   line-height: 30px;
   color: #601b9f;
-  filter: drop-shadow(0 0 0.75rem  #601b9f);
+  filter: drop-shadow(0 0 0.75rem #601b9f);
 }
 .lore-text {
   font-family: "Orbitron", sans-serif;

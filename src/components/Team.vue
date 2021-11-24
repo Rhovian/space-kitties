@@ -51,7 +51,7 @@ import Stars from "./Stars.vue";
   font-family: "Press Start 2P", cursive;
   font-size: 0.8em;
   text-align: center;
-  color: #d9fbff
+  color: #d9fbff;
 }
 .team-title {
   font-family: "Press Start 2P", cursive;

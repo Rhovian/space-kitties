@@ -7,7 +7,7 @@
         <section id="cd-timeline" class="cd-container" data-aos="fade-up">
           <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-movie">
-              <img class="roadmap-moon" src="../assets/saturn.svg" alt="">
+              <img class="roadmap-moon" src="../assets/saturn.svg" alt="" />
             </div>
             <div class="cd-timeline-content" data-aos="fade-right">
               <div class="rm-top">
@@ -24,7 +24,11 @@
 
           <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-movie">
-              <img class="roadmap-moon" src="../assets/green_planet.svg" alt="">
+              <img
+                class="roadmap-moon"
+                src="../assets/green_planet.svg"
+                alt=""
+              />
             </div>
             <div class="cd-timeline-content" data-aos="fade-left">
               <div class="rm-top">
@@ -41,8 +45,8 @@
 
           <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-movie">
-              <img class="roadmap-moon" src="../assets/jupiter.svg" alt="">
-            </div>             
+              <img class="roadmap-moon" src="../assets/jupiter.svg" alt="" />
+            </div>
             <div class="cd-timeline-content" data-aos="fade-right">
               <div class="rm-top">
                 <div class="rm-text">
@@ -60,8 +64,8 @@
           </div>
           <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-movie">
-              <img class="roadmap-moon" src="../assets/uranus.svg" alt="">
-            </div>            
+              <img class="roadmap-moon" src="../assets/uranus.svg" alt="" />
+            </div>
             <div class="cd-timeline-content" data-aos="fade-left">
               <div class="rm-top">
                 <div class="rm-text">
@@ -76,7 +80,7 @@
           </div>
           <div class="cd-timeline-block">
             <div class="cd-timeline-img cd-movie">
-              <img class="roadmap-moon" src="../assets/mars.svg" alt="">
+              <img class="roadmap-moon" src="../assets/mars.svg" alt="" />
             </div>
 
             <div class="cd-timeline-content" data-aos="fade-right">
@@ -130,7 +134,6 @@ import Stars from "./Stars.vue";
   color: #92d3cd;
   font-size: 1.75em;
   filter: drop-shadow(0 0 0.75rem #92d3cd);
-
 }
 /** from solomon */
 .roadmap {
@@ -201,15 +204,21 @@ Main components
   left: 25px;
   height: 100%;
   width: 4px;
-  background: #D761ED;
+  background: #d761ed;
   border-radius: 3px;
   animation: mymove 5s infinite ease-in-out forwards;
 }
 
 @keyframes mymove {
-  0% {background-color: #D761ED;}
-  50% {background-color:  #92d3cd;}
-  100% {background-color: #D761ED;}
+  0% {
+    background-color: #d761ed;
+  }
+  50% {
+    background-color: #92d3cd;
+  }
+  100% {
+    background-color: #d761ed;
+  }
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
@@ -278,8 +287,8 @@ Main components
   border-radius: 2px;
   padding: 1em;
   border-radius: 12.5px;
-  border: 2px solid #BA87FF;
-  filter: drop-shadow(0 0 0.1rem #BA87FF)
+  border: 2px solid #ba87ff;
+  filter: drop-shadow(0 0 0.1rem #ba87ff);
 }
 .cd-timeline-content:after {
   content: "";
@@ -295,7 +304,7 @@ Main components
 }
 .cd-timeline-content p,
 .cd-timeline-content .cd-date {
-  color:#d9fbff;
+  color: #d9fbff;
   font-size: 1.1em;
   text-align: left;
   letter-spacing: 2px;
@@ -392,7 +401,7 @@ Main components
 
 /* end of solomon stuff */
 .roadmap-moon {
-  width: 100%; 
+  width: 100%;
 }
 /** general media queries */
 @media screen and (min-width: 600px) {

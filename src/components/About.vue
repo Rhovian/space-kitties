@@ -1,13 +1,13 @@
 <template>
   <div class="about-wrapper">
     <div class="about-content-wrapper">
-      <h3 class="about-title">What are Space Kitties?</h3>
-      <div class="about-text">
+      <h3 class="about-title" data-aos="fade-left">What are Space Kitties?</h3>
+      <div class="about-text" data-aos="fade-right">
         The Time Traveling Anime Villains are a collection of 10,000 NFTs -
         unique digital collectibles that live on the Ethereum blockchain.
       </div>
       <br />
-      <div class="about-text">
+      <div class="about-text" data-aos="fade-right">
         Your villain doubles as a membership pass that grants you access to the
         Den, an exclusive club where Villains will get assigned missions, earn
         prizes, and much more. Future features and perks will be integrated with
@@ -18,104 +18,232 @@
       <div className="cardgrid" id="collection">
         <div data-aos="fade-left" className="gallery">
           <figure className="gallery__item gallery__item--1">
-            <img src="../assets/sk_1.jpg" className="gallery__img" alt="Image 1" />
+            <img
+              src="../assets/sk_1.jpg"
+              className="gallery__img"
+              alt="Image 1"
+            />
           </figure>
           <figure className="gallery__item gallery__item--2">
-            <img src="../assets/sk_2.jpg" className="gallery__img" alt="Image 2" />
+            <img
+              src="../assets/sk_2.jpg"
+              className="gallery__img"
+              alt="Image 2"
+            />
           </figure>
           <figure className="gallery__item gallery__item--3">
-            <img src="../assets/sk_7.jpg" className="gallery__img" alt="Image 3" />
+            <img
+              src="../assets/sk_7.jpg"
+              className="gallery__img"
+              alt="Image 3"
+            />
           </figure>
           <figure className="gallery__item gallery__item--4">
-            <img src="../assets/sk_8.png" className="gallery__img" alt="Image 4" />
+            <img
+              src="../assets/sk_8.png"
+              className="gallery__img"
+              alt="Image 4"
+            />
           </figure>
           <figure className="gallery__item gallery__item--5">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 5" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 5"
+            />
           </figure>
           <figure className="gallery__item gallery__item--6">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 6" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 6"
+            />
           </figure>
           <figure className="gallery__item gallery__item--7">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 1" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 1"
+            />
           </figure>
           <figure className="gallery__item gallery__item--8">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 2" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 2"
+            />
           </figure>
           <figure className="gallery__item gallery__item--9">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 3" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 3"
+            />
           </figure>
           <figure className="gallery__item gallery__item--10">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 4" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 4"
+            />
           </figure>
           <figure className="gallery__item gallery__item--11">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 5" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 5"
+            />
           </figure>
           <figure className="gallery__item gallery__item--12">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 6" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 6"
+            />
           </figure>
           <figure className="gallery__item gallery__item--13">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 3" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 3"
+            />
           </figure>
           <figure className="gallery__item gallery__item--14">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 4" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 4"
+            />
           </figure>
           <figure className="gallery__item gallery__item--15">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 5" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 5"
+            />
           </figure>
           <figure className="gallery__item gallery__item--16">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 6" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 6"
+            />
           </figure>
 
           <figure className="gallery__item gallery__item--17">
-            <img src="../assets/sk_3.jpg" className="gallery__img" alt="Image 1" />
+            <img
+              src="../assets/sk_3.jpg"
+              className="gallery__img"
+              alt="Image 1"
+            />
           </figure>
           <figure className="gallery__item gallery__item--18">
-            <img src="../assets/sk_4.jpg" className="gallery__img" alt="Image 2" />
+            <img
+              src="../assets/sk_4.jpg"
+              className="gallery__img"
+              alt="Image 2"
+            />
           </figure>
           <figure className="gallery__item gallery__item--19">
-            <img src="../assets/sk_5.jpg" className="gallery__img" alt="Image 3" />
+            <img
+              src="../assets/sk_5.jpg"
+              className="gallery__img"
+              alt="Image 3"
+            />
           </figure>
           <figure className="gallery__item gallery__item--20">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 4" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 4"
+            />
           </figure>
           <figure className="gallery__item gallery__item--21">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 5" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 5"
+            />
           </figure>
           <figure className="gallery__item gallery__item--22">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 6" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 6"
+            />
           </figure>
           <figure className="gallery__item gallery__item--23">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 1" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 1"
+            />
           </figure>
           <figure className="gallery__item gallery__item--24">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 2" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 2"
+            />
           </figure>
           <figure className="gallery__item gallery__item--25">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 3" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 3"
+            />
           </figure>
           <figure className="gallery__item gallery__item--26">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 4" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 4"
+            />
           </figure>
           <figure className="gallery__item gallery__item--27">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 5" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 5"
+            />
           </figure>
           <figure className="gallery__item gallery__item--28">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 6" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 6"
+            />
           </figure>
           <figure className="gallery__item gallery__item--29">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 3" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 3"
+            />
           </figure>
           <figure className="gallery__item gallery__item--30">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 4" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 4"
+            />
           </figure>
           <figure className="gallery__item gallery__item--31">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 5" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 5"
+            />
           </figure>
           <figure className="gallery__item gallery__item--32">
-            <img src="../assets/sk_6.png" className="gallery__img" alt="Image 6" />
+            <img
+              src="../assets/sk_6.png"
+              className="gallery__img"
+              alt="Image 6"
+            />
           </figure>
         </div>
-    </div>
+      </div>
     </div>
     <Stars />
   </div>
@@ -125,7 +253,7 @@
 import Stars from "./Stars.vue";
 // @ts-ignore
 // eslint-disable-next-line no-unused-vars
-import {sk_1} from "../assets/sk_6.png"
+import { sk_1 } from "../assets/sk_6.png";
 </script>
 
 <style>
