@@ -8750,6 +8750,11 @@ vue-loader@^15.9.2:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-socials@^2.0.0-0:
+  version "2.0.0-0"
+  resolved "https://registry.yarnpkg.com/vue-socials/-/vue-socials-2.0.0-0.tgz#f73d90e4c6d3612f953856bf1686a46779dac95d"
+  integrity sha512-eifDAx4FOSZlNbW0ip9YCOE3DOjSR68UQ4aGWEc4VldyWUwfhGLHS7lyiePy/mmzhR+dc7kE/n5GkY0MlldlaA==
+
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.3.tgz#6d55863a51fa757ab24e89d9371465072aa7bc35"

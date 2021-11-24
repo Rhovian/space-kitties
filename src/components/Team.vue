@@ -48,9 +48,10 @@ import Stars from "./Stars.vue";
 }
 .team-text {
   width: 100%;
-  font-family: "Orbitron", sans-serif;
-  font-size: 1em;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8em;
   text-align: center;
+  color: #d9fbff
 }
 .team-title {
   font-family: "Press Start 2P", cursive;
@@ -71,7 +72,13 @@ import Stars from "./Stars.vue";
   width: 100%;
 }
 .team-img {
-  width: 100%;
+  width: 85%;
+}
+.team-text {
+  font-size: 1.15em;
+  padding: 0.5em 1em;
+  text-align: center;
+  letter-spacing: 2px;
 }
 /** general media queries */
 @media screen and (min-width: 601px) {

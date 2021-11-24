@@ -21,7 +21,7 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   font-family: "Press Start 2P", cursive;
-  margin-top: 1em;
+  margin-left: 1em;
 
   padding: 13px 35px 10px 35px;
   border-radius: 100px;

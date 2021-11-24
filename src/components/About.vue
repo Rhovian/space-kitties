@@ -57,16 +57,21 @@ import Stars from "./Stars.vue";
   font-family: "Press Start 2P", cursive;
   text-align: center;
   line-height: 30px;
-  color: #92d3cd;
+  color: #e0249f;
+  filter: drop-shadow(0 0 0.75rem #e0249f);
   width: 100%;
 }
 .about-text {
   font-family: "Orbitron", sans-serif;
-  font-size: 0.8em;
+  font-size: 1.15em;
+  padding: 0.5em 1em;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #d9fbff;
 }
 .about-img {
-  width: 90%;
-  padding: 1em;
+  width: 85%;
+  padding: 2em;
 }
 /** tablet portrait */
 @media screen and (min-width: 600px) {

@@ -44,7 +44,6 @@ import Stars from "./Stars.vue";
   background: transparent;
   z-index: 10;
   position: relative;
-  padding-top: 2.5em;
 }
 .lore-content-wrapper {
   display: flex;
@@ -59,15 +58,20 @@ import Stars from "./Stars.vue";
   font-family: "Press Start 2P", cursive;
   text-align: center;
   line-height: 30px;
-  color: #92d3cd;
+  color: #601b9f;
+  filter: drop-shadow(0 0 0.75rem  #601b9f);
 }
 .lore-text {
   font-family: "Orbitron", sans-serif;
-  font-size: 0.8em;
+  font-size: 1.15em;
+  padding: 0.5em 1em;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #d9fbff;
 }
 .lore-img {
-  width: 90%;
-  padding: 1em;
+  width: 85%;
+  padding: 2em;
 }
 @media screen and (min-width: 600px) {
   .lore-text {

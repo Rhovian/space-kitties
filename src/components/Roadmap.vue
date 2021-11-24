@@ -6,7 +6,9 @@
 
         <section id="cd-timeline" class="cd-container" data-aos="fade-up">
           <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie"></div>
+            <div class="cd-timeline-img cd-movie">
+              <img class="roadmap-moon" src="../assets/saturn.svg" alt="">
+            </div>
             <div class="cd-timeline-content" data-aos="fade-right">
               <div class="rm-top">
                 <div class="rm-text">
@@ -21,7 +23,9 @@
           </div>
 
           <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie"></div>
+            <div class="cd-timeline-img cd-movie">
+              <img class="roadmap-moon" src="../assets/green_planet.svg" alt="">
+            </div>
             <div class="cd-timeline-content" data-aos="fade-left">
               <div class="rm-top">
                 <div class="rm-text">
@@ -36,7 +40,9 @@
           </div>
 
           <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie"></div>
+            <div class="cd-timeline-img cd-movie">
+              <img class="roadmap-moon" src="../assets/jupiter.svg" alt="">
+            </div>             
             <div class="cd-timeline-content" data-aos="fade-right">
               <div class="rm-top">
                 <div class="rm-text">
@@ -53,7 +59,9 @@
             </div>
           </div>
           <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie"></div>
+            <div class="cd-timeline-img cd-movie">
+              <img class="roadmap-moon" src="../assets/uranus.svg" alt="">
+            </div>            
             <div class="cd-timeline-content" data-aos="fade-left">
               <div class="rm-top">
                 <div class="rm-text">
@@ -67,7 +75,9 @@
             </div>
           </div>
           <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie"></div>
+            <div class="cd-timeline-img cd-movie">
+              <img class="roadmap-moon" src="../assets/mars.svg" alt="">
+            </div>
 
             <div class="cd-timeline-content" data-aos="fade-right">
               <div class="rm-top">
@@ -116,9 +126,11 @@ import Stars from "./Stars.vue";
 .roadmap-title {
   font-family: "Press Start 2P", cursive;
   text-align: center;
-  line-height: 30px;
+  line-height: 40px;
   color: #92d3cd;
-  font-size: 1.25em;
+  font-size: 1.75em;
+  filter: drop-shadow(0 0 0.75rem #92d3cd);
+
 }
 /** from solomon */
 .roadmap {
@@ -146,13 +158,6 @@ import Stars from "./Stars.vue";
 
 .rm-top {
   display: flex;
-}
-.rm-img {
-  width: 10%;
-  margin: auto;
-}
-.rm-img img {
-  max-width: 100%;
 }
 .rm-text {
   width: 85%;
@@ -196,7 +201,15 @@ Main components
   left: 25px;
   height: 100%;
   width: 4px;
-  background: #92d3cd;
+  background: #D761ED;
+  border-radius: 3px;
+  animation: mymove 5s infinite ease-in-out forwards;
+}
+
+@keyframes mymove {
+  0% {background-color: #D761ED;}
+  50% {background-color:  #92d3cd;}
+  100% {background-color: #D761ED;}
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
@@ -239,15 +252,10 @@ Main components
 .cd-timeline-img {
   position: absolute;
   top: 8px;
-  left: 12px;
-  width: 30px;
-  height: 30px;
+  left: 5px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #e0249f, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
-}
-.cd-timeline-img {
-  background: #601b9f;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
@@ -266,10 +274,12 @@ Main components
   position: relative;
   margin-left: 60px;
   margin-right: 30px;
-  background: #853dbd;
+  background: rgb(133, 61, 189, 0.2);
   border-radius: 2px;
   padding: 1em;
   border-radius: 12.5px;
+  border: 2px solid #BA87FF;
+  filter: drop-shadow(0 0 0.1rem #BA87FF)
 }
 .cd-timeline-content:after {
   content: "";
@@ -281,12 +291,14 @@ Main components
   margin-top: 0;
   margin-bottom: 5px;
   text-align: left;
+  filter: drop-shadow(0 0 0.05rem #92d3cd);
 }
 .cd-timeline-content p,
 .cd-timeline-content .cd-date {
-  color: white;
+  color:#d9fbff;
   font-size: 1.1em;
   text-align: left;
+  letter-spacing: 2px;
 }
 .cd-timeline-content .cd-date {
   display: inline-block;
@@ -378,43 +390,10 @@ Main components
   }
 }
 
-.glitchy {
-  display: inline-flex;
-  font-family: "glitch";
-  color: #55f316;
-  padding-left: 4px;
-}
-
-.discordLink a {
-  border: solid 2px;
-  border-radius: 1000px;
-  text-decoration: none;
-  font-size: 0.4em;
-  padding: 25px 30px;
-  text-align: center;
-  font-family: "glitch-normal";
-  color: white;
-  background-color: #adf532e0;
-  border: solid 1px #0a3a09;
-  text-shadow: 0px 1px 3px rgb(0 0 0);
-}
-.discordLink a:hover {
-  color: rgb(235, 235, 235);
-  background-color: #aef532f5;
-  transform: translate(0px, 1px);
-  transition: all 0.15s ease-out;
-}
-
-@media screen and (max-width: 780px) {
-  .discordLink a {
-    font-size: 10px;
-    padding: 12px 21px;
-  }
-  .rm-img {
-    width: 20%;
-  }
-}
 /* end of solomon stuff */
+.roadmap-moon {
+  width: 100%; 
+}
 /** general media queries */
 @media screen and (min-width: 600px) {
   .roadmap-title {
