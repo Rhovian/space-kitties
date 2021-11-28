@@ -34,4 +34,10 @@
     width: 75%;
   }
 }
+
+@media screen and (min-width: 1400px) {
+  .logo {
+    width: 50%;
+  }
+}
 </style>

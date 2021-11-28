@@ -112,12 +112,6 @@ import Stars from "./Stars.vue";
   .team-text {
     font-size: 1.75em;
   }
-}
-@media screen and (min-width: 1500px) {
-  .team-text {
-    font-size: 2.5em;
-    padding-top: 1em;
-  }
   .team-content-inner-wrapper {
     display: flex;
     flex-direction: row;
@@ -126,10 +120,22 @@ import Stars from "./Stars.vue";
     justify-content: space-evenly;
   }
   .team-inner-wrapper {
+    width: auto;
+  }
+  .team-wrapper {
+    padding-bottom: 10em;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .team-text {
+    font-size: 2.5em;
+    padding-top: 1em;
+  }
+  .team-inner-wrapper {
     width: 40%;
   }
   .team-img {
-    width: 100%;
+    width: 50%;
   }
 }
 </style>

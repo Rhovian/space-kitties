@@ -101,10 +101,21 @@ button:hover {
 
   background-color: rgba(255, 255, 255, 0.25);
 }
+@media screen and (min-width: 1000px) {
+  button {
+    font-size: 1.25em;
+    padding: 16px 38px 13px 38px;
+  }
+  .navbar-wrapper {
+    padding-top: 0.5em;
+  }
+}
+
 @media screen and (min-width: 1500px) {
   button {
     font-size: 2em;
     padding: 16px 38px 13px 38px;
   }
 }
+
 </style>

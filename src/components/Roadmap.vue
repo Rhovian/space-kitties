@@ -429,19 +429,25 @@ Main components
 
 /** desktop */
 @media screen and (min-width: 1200px) {
-  .faq-title {
-    font-size: 2.5em;
+  .roadmap-title {
+    font-size: 3.25em;
   }
-  .faq-text {
+  .roadmap-text {
     font-size: 1.75em;
   }
-  .faq-header {
+  .roadmap-header {
     font-size: 3.25em;
+  }
+  .roadmap-moon {
+    width: 7.5vw;
+  }
+  .cd-timeline-img {
+    left: 45%;
   }
 }
 
 /** desktop */
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
   .roadmap-title {
     font-size: 3.25em;
     line-height: 1.5em;
@@ -451,6 +457,15 @@ Main components
   }
   .cd-timeline-content p {
     font-size: 1.5em;
+  }
+  .cd-timeline-img {
+    left: 44%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .cd-timeline-img {
+    left: 42.5%;
   }
 }
 /** desktop */
@@ -473,6 +488,9 @@ Main components
     height: 60px;
     width: 60px;
     left: 48%;
+  }
+  .cd-timeline-img {
+    left: 43%;
   }
 }
 </style>

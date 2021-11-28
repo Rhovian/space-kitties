@@ -145,7 +145,7 @@ import Stars from "./Stars.vue";
 }
 
 /** desktop */
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1400px) {
   .faq-title {
     font-size: 2.5em;
   }

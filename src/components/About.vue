@@ -14,14 +14,13 @@
         roadmap unlocks.
       </div>
     </div>
-    <div class="about-content-wrapper about-img-wrapper">
+    <div class="about-content-wrapper about-img-wrapper-mobile">
       <div class="about-img-row">
         <img class="about-img" src="../assets/sk_1.jpg" alt="" />
         <img class="about-img" src="../assets/sk_2.jpg" alt="" />
         <img class="about-img" src="../assets/sk_3.jpg" alt="" />
         <img class="about-img" src="../assets/sk_7.jpg" alt="" />
         <img class="about-img" src="../assets/sk_8.png" alt="" />
-
       </div>
       <div class="about-img-row">
         <img class="about-img" src="../assets/sk_4.jpg" alt="" />
@@ -29,7 +28,20 @@
         <img class="about-img" src="../assets/sk_6.png" alt="" />
         <img class="about-img" src="../assets/sk_10.jpg" alt="" />
         <img class="about-img" src="../assets/sk_11.jpg" alt="" />
-
+      </div>
+    </div>
+    <div class="about-content-wrapper about-img-wrapper-desktop">
+      <div class="about-img-row">
+        <img class="about-img" src="../assets/sk_1.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_3.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_7.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_8.png" alt="" />
+        <img class="about-img" src="../assets/sk_4.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_5.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_6.png" alt="" />
+        <img class="about-img" src="../assets/sk_10.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_11.jpg" alt="" />
       </div>
     </div>
     <Stars />
@@ -69,8 +81,11 @@ import { sk_1 } from "../assets/sk_6.png";
   color: white;
   padding-top: 3em;
 }
-.about-img-wrapper {
+.about-img-wrapper-mobile {
   align-items: center;
+}
+.about-img-wrapper-desktop {
+  display: none;
 }
 .about-img-row {
   display: flex;
@@ -117,8 +132,17 @@ import { sk_1 } from "../assets/sk_6.png";
     line-height: 1.5em;
   }
 }
-/** tablet landscape */
-@media screen and (min-height: 600px) and (min-width: 950px) {
+@media screen and (min-width: 1000px) {
+  .about-img {
+    width: 25vw;
+    height: 25vw;
+  }
+  .about-img-wrapper-mobile {
+    display: none;
+  }
+  .about-img-wrapper-desktop {
+    display: flex;
+  }
 }
 /** desktop */
 @media screen and (min-width: 1200px) {
