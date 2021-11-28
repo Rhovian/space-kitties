@@ -75,7 +75,7 @@ import Stars from "./Stars.vue";
 
 <style>
 .faq-wrapper {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background: transparent;
   z-index: 10;
@@ -115,7 +115,7 @@ import Stars from "./Stars.vue";
 .faq-text {
   font-family: "Orbitron", sans-serif;
   font-size: 1.15em;
-  padding: 0.5em 1em;
+  padding: 0.5em 2em;
   text-align: center;
   letter-spacing: 2px;
   color: #d9fbff;

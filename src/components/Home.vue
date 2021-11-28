@@ -1,13 +1,11 @@
 <template>
   <div class="home">
     <Landing />
-    <Stars />
   </div>
 </template>
 
 <script setup lang="ts">
 import Landing from "./Landing.vue";
-import Stars from "./Stars.vue";
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -20,5 +18,7 @@ import Stars from "./Stars.vue";
   z-index: 10;
   margin: 0;
   overflow-x: hidden;
+  background: url("../assets/Space_kitties.gif");
+  background-size: cover;
 }
 </style>

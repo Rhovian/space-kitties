@@ -38,7 +38,6 @@ import Stars from "./Stars.vue";
   position: relative;
   margin: 0;
   overflow-x: hidden;
-  padding: 0 0.75em;
   background: black;
 }
 .team-content-wrapper {
@@ -64,7 +63,6 @@ import Stars from "./Stars.vue";
   color: #92d3cd;
   width: 100%;
   filter: drop-shadow(0 0 0.75rem #92d3cd);
-
 }
 .team-inner-wrapper {
   padding: 2em 0;
@@ -86,7 +84,6 @@ import Stars from "./Stars.vue";
   text-align: center;
   letter-spacing: 2px;
   filter: drop-shadow(0 0 0.75rem #92d3cd);
-
 }
 /** general media queries */
 @media screen and (min-width: 601px) {

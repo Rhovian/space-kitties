@@ -23,32 +23,17 @@ import Navbar from "./components/Navbar.vue";
 </script>
 
 <style>
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: black;
   margin: 0;
+  overflow-x: hidden;
 }
 .app-footer-wrapper {
   position: relative;
   height: 25vh;
-}
-@media screen and (min-width: 600px) {
-  .app-inner-wrapper {
-    padding: 0 1em;
-  }
-}
-@media screen and (min-height: 600px) and (min-width: 950px) {
-  .app-inner-wrapper {
-    padding: 0 2em;
-  }
-}
-@media screen and (min-width: 700px) {
-  .app-inner-wrapper {
-    padding: 0 3em;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .app-inner-wrapper {
-    padding: 0 5em;
-  }
 }
 </style>

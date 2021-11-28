@@ -62,7 +62,7 @@ import Stars from "./Stars.vue";
 .lore-text {
   font-family: "Orbitron", sans-serif;
   font-size: 1.15em;
-  padding: 0.5em 1em;
+  padding: 0.5em 2em;
   text-align: center;
   letter-spacing: 2px;
   color: #d9fbff;

@@ -113,7 +113,7 @@ import Stars from "./Stars.vue";
 
 <style>
 .roadmap-wrapper {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background: transparent;
   z-index: 10;
@@ -121,7 +121,7 @@ import Stars from "./Stars.vue";
   margin: 0;
   overflow-x: hidden;
   padding: 0 0.75em;
-  }
+}
 .roadmap-content-wrapper {
   display: flex;
   justify-content: center;
@@ -179,7 +179,6 @@ import Stars from "./Stars.vue";
 .cd-container {
   width: 90%;
   max-width: 1280px;
-  margin: 0 auto;
   padding: 0 10%;
   border-radius: 2px;
 }

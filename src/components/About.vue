@@ -16,14 +16,14 @@
     </div>
     <div class="about-content-wrapper about-img-wrapper">
       <div class="about-img-row">
-        <img class="about-img" src="../assets/sk_1.jpg" alt="">
-        <img class="about-img" src="../assets/sk_2.jpg" alt="">
-        <img class="about-img" src="../assets/sk_2.jpg" alt="">
+        <img class="about-img" src="../assets/sk_1.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
       </div>
       <div class="about-img-row">
-        <img class="about-img" src="../assets/sk_1.jpg" alt="">
-        <img class="about-img" src="../assets/sk_2.jpg" alt="">
-        <img class="about-img" src="../assets/sk_2.jpg" alt="">
+        <img class="about-img" src="../assets/sk_1.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
       </div>
     </div>
     <Stars />
@@ -86,7 +86,7 @@ import { sk_1 } from "../assets/sk_6.png";
 .about-text {
   font-family: "Orbitron", sans-serif;
   font-size: 1.15em;
-  padding: 0.5em 1.5em;
+  padding: 0.5em 2em;
   text-align: center;
   letter-spacing: 2px;
   color: #d9fbff;
