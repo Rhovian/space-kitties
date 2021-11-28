@@ -95,10 +95,16 @@ import Stars from "./Stars.vue";
     line-height: 1.5em;
   }
 }
+/** tablet landscape */
+@media screen and (min-height: 600px) and (max-width: 1080px) {
+  .team-img {
+    width: 50%;
+  }
+}
 /** desktop */
 @media screen and (min-width: 1200px) {
   .team-img {
-    width: 75%;
+    width: 50%;
   }
   .team-title {
     font-size: 3.25em;

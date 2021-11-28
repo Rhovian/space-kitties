@@ -27,7 +27,7 @@
 }
 /** LOGO STUFF */
 .logo {
-  width: 100%;
+  width: 90%;
 }
 @media screen and (min-width: 1000px) {
   .logo {

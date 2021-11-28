@@ -103,6 +103,7 @@ import Stars from "./Stars.vue";
   color: #92d3cd;
   padding-top: 1em;
   filter: drop-shadow(0 0 0.75rem #92d3cd);
+  padding: 1em 1em 0 1em;
 }
 .title-purple {
   color: #601b9f;

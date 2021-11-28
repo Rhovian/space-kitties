@@ -18,12 +18,18 @@
       <div class="about-img-row">
         <img class="about-img" src="../assets/sk_1.jpg" alt="" />
         <img class="about-img" src="../assets/sk_2.jpg" alt="" />
-        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_3.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_7.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_8.png" alt="" />
+
       </div>
       <div class="about-img-row">
-        <img class="about-img" src="../assets/sk_1.jpg" alt="" />
-        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
-        <img class="about-img" src="../assets/sk_2.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_4.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_5.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_6.png" alt="" />
+        <img class="about-img" src="../assets/sk_10.jpg" alt="" />
+        <img class="about-img" src="../assets/sk_11.jpg" alt="" />
+
       </div>
     </div>
     <Stars />
@@ -74,6 +80,7 @@ import { sk_1 } from "../assets/sk_6.png";
 }
 .about-img {
   width: 50vw;
+  height: 50vw;
 }
 .about-title {
   font-family: "Press Start 2P", cursive;
