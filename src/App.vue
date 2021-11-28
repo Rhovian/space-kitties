@@ -6,6 +6,7 @@
     <Lore />
     <Faq />
     <Roadmap />
+    <RoadmapV2 />
     <Team />
   </div>
   <FooterVue />
@@ -20,6 +21,7 @@ import Faq from "./components/Faq.vue";
 import Team from "./components/Team.vue";
 import FooterVue from "./components/Footer.vue";
 import Navbar from "./components/Navbar.vue";
+import RoadmapV2 from "./components/RoadmapV2.vue";
 </script>
 
 <style>
