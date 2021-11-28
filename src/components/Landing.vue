@@ -2,7 +2,7 @@
   <div class="landing-wrapper">
     <div class="landing-inner-wrapper">
       <div class="landing-content-wrapper">
-        <img class="logo" data-aos="fade-in" src="../assets/ga.png" alt="" />
+        <img class="logo" src="../assets/sk_logo.png" alt="" />
       </div>
     </div>
   </div>
@@ -28,6 +28,7 @@
 /** LOGO STUFF */
 .logo {
   width: 90%;
+  height: 90%;
 }
 @media screen and (min-width: 1000px) {
   .logo {
