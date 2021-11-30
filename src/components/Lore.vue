@@ -81,6 +81,11 @@ import Stars from "./Stars.vue";
   }
 }
 /** desktop */
+@media screen and (min-width: 1000px) {
+  .lore-text {
+    padding: 0.5em 7.5em;
+  }
+}
 @media screen and (min-width: 1200px) {
   .lore-img {
     width: 75%;

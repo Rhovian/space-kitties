@@ -41,4 +41,15 @@ import Mint from "./web3/Mint.vue";
   justify-content: space-evenly;
   align-items: flex-start;
 }
+
+@media screen and (min-width: 900px) {
+  .navbar-socials-wrapper {
+    width: 22.5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navbar-wrapper {
+    padding-top: 1em;
+  }
+}
 </style>

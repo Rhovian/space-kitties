@@ -32,6 +32,7 @@
 @media screen and (min-width: 1000px) {
   .logo {
     width: 75%;
+    height: 80vh;
   }
 }
 

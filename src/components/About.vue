@@ -156,6 +156,9 @@ import { sk_1 } from "../assets/sk_6.png";
   .about-img-wrapper-desktop {
     display: flex;
   }
+  .about-text {
+    padding: 0.5em 7.5em;
+  }
 }
 /** desktop */
 @media screen and (min-width: 1200px) {
