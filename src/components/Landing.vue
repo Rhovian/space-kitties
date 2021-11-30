@@ -23,12 +23,11 @@
   color: white;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 /** LOGO STUFF */
 .logo {
   width: 90%;
-  height: 90%;
 }
 @media screen and (min-width: 1000px) {
   .logo {

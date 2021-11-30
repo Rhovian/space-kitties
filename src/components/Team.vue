@@ -5,19 +5,31 @@
       <div class="team-content-inner-wrapper">
         <div class="team-inner-wrapper">
           <img class="team-img" src="../assets/sk_8.png" alt="" />
-          <div class="team-text">Team member 1</div>
+          <div class="team-text">
+            <div class="team-role">Project Lead</div>
+            <div class="team-name">0xUltra</div>
+          </div>
         </div>
         <div class="team-inner-wrapper">
           <img class="team-img" src="../assets/sk_8.png" alt="" />
-          <div class="team-text">Team member 2</div>
+          <div class="team-text">
+            <div class="team-role">Marketing</div>
+            <div class="team-name">HeadAnimeVillain</div>
+          </div>
         </div>
         <div class="team-inner-wrapper">
           <img class="team-img" src="../assets/sk_8.png" alt="" />
-          <div class="team-text">Team member 3</div>
+          <div class="team-text">
+            <div class="team-role">Web3</div>
+            <div class="team-name">yoooRE</div>
+          </div>
         </div>
         <div class="team-inner-wrapper">
           <img class="team-img" src="../assets/sk_8.png" alt="" />
-          <div class="team-text">Team member 4</div>
+          <div class="team-text">
+            <div class="team-role">Artist</div>
+            <div class="team-name">Dim</div>
+          </div>
         </div>
       </div>
     </div>
@@ -52,9 +64,17 @@ import Stars from "./Stars.vue";
 .team-text {
   width: 100%;
   font-family: "Press Start 2P", cursive;
-  font-size: 0.8em;
+  font-size: 0.35em;
   text-align: center;
   color: #d9fbff;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5em 1em;
+  text-align: center;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 0.75rem #92d3cd);
 }
 .team-title {
   font-family: "Press Start 2P", cursive;
@@ -64,26 +84,24 @@ import Stars from "./Stars.vue";
   width: 100%;
   filter: drop-shadow(0 0 0.75rem #92d3cd);
 }
+.team-content-inner-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .team-inner-wrapper {
   padding: 2em 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-}
-.team-content-inner-wrapper {
-  width: 100%;
+  width: 50%;
 }
 .team-img {
-  width: 75%;
+  width: 100%;
 }
-.team-text {
-  font-size: 1.15em;
-  padding: 0.5em 1em;
-  text-align: center;
-  letter-spacing: 2px;
-  filter: drop-shadow(0 0 0.75rem #92d3cd);
+.team-role {
+  padding-top: 1em;
 }
 /** general media queries */
 @media screen and (min-width: 601px) {

@@ -22,7 +22,7 @@
         <img class="about-img" src="../assets/sk_7.jpg" alt="" />
         <img class="about-img" src="../assets/sk_8.png" alt="" />
       </div>
-      <div class="about-img-row">
+      <div class="about-img-row about-img-row-alternate">
         <img class="about-img" src="../assets/sk_4.jpg" alt="" />
         <img class="about-img" src="../assets/sk_5.jpg" alt="" />
         <img class="about-img" src="../assets/sk_6.png" alt="" />
@@ -93,6 +93,11 @@ import { sk_1 } from "../assets/sk_6.png";
   line-height: 0;
   animation: scroll 25s linear infinite;
 }
+.about-img-row-alternate {
+  display: flex;
+  flex-direction: row-reverse;
+  animation: scroll-alternate 25s linear infinite;
+}
 .about-img {
   width: 50vw;
   height: 50vw;
@@ -120,6 +125,14 @@ import { sk_1 } from "../assets/sk_6.png";
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+@keyframes scroll-alternate {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(50%);
   }
 }
 /** tablet portrait */

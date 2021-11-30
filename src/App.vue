@@ -4,9 +4,9 @@
     <Home />
     <About />
     <Lore />
-    <Faq />
     <Roadmap />
     <RoadmapV2 />
+    <Faq />
     <Team />
   </div>
   <FooterVue />

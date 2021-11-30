@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar-wrapper">
+  <div class="connect-mint-wrapper">
     <button>Connect</button>
   </div>
 </template>

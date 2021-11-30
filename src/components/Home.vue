@@ -18,7 +18,7 @@ import Landing from "./Landing.vue";
   z-index: 10;
   margin: 0;
   overflow-x: hidden;
-  background: url("../assets/Space_kitties.gif");
+  background: url("../assets/Space_kitties.gif") 20%;
   background-size: cover;
 }
 @media screen and (min-width: 1024px) {
