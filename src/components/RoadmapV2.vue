@@ -83,7 +83,7 @@
   width: 500px;
   height: 500px;
   animation-name: spin;
-  animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite ease-in-out;
 }
 @keyframes spin {
   0% {
