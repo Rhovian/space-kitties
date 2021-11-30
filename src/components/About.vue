@@ -70,6 +70,7 @@ import { sk_1 } from "../assets/sk_6.png";
   flex-direction: column;
   z-index: 10;
   position: relative;
+  padding-bottom: 0;
 }
 .about-content-wrapper {
   display: flex;

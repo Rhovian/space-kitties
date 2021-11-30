@@ -1,7 +1,7 @@
 <template>
   <div class="navbar-wrapper">
     <div class="navbar-inner-wrapper">
-      <Mint />
+      <Connect />
       <div class="navbar-spacer"></div>
       <div class="navbar-socials-wrapper">
         <img class="icon" src="../assets/discord.svg" alt="" />
@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import Mint from "./web3/Mint.vue";
+import Connect from "./web3/Connect.vue";
 </script>
 
 <style>

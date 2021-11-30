@@ -1,8 +1,10 @@
 <template>
   <div class="connect-mint-wrapper">
-    <button>Mint</button>
+    <button>Connect</button>
   </div>
 </template>
+
+<script setup lang="ts"></script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");

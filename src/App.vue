@@ -3,6 +3,7 @@
   <div class="app-inner-wrapper">
     <Home />
     <About />
+    <MintSection />
     <Lore />
     <Roadmap />
     <RoadmapV2 />
@@ -22,6 +23,7 @@ import Team from "./components/Team.vue";
 import FooterVue from "./components/Footer.vue";
 import Navbar from "./components/Navbar.vue";
 import RoadmapV2 from "./components/RoadmapV2.vue";
+import MintSection from "./components/MintSection.vue";
 </script>
 
 <style>
