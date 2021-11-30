@@ -4,28 +4,28 @@
       <h2 class="team-title">Meet the Team</h2>
       <div class="team-content-inner-wrapper">
         <div class="team-inner-wrapper">
-          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <img class="team-img" src="../assets/ultra.png" alt="" />
           <div class="team-text">
             <div class="team-role">Project Lead</div>
             <div class="team-name">0xUltra</div>
           </div>
         </div>
         <div class="team-inner-wrapper">
-          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <img class="team-img" src="../assets/headvillian.png" alt="" />
           <div class="team-text">
             <div class="team-role">Marketing</div>
             <div class="team-name">HeadAnimeVillain</div>
           </div>
         </div>
         <div class="team-inner-wrapper">
-          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <img class="team-img" src="../assets/yoree.png" alt="" />
           <div class="team-text">
             <div class="team-role">Web3</div>
             <div class="team-name">yoooRE</div>
           </div>
         </div>
         <div class="team-inner-wrapper">
-          <img class="team-img" src="../assets/sk_8.png" alt="" />
+          <img class="team-img" src="../assets/dim.png" alt="" />
           <div class="team-text">
             <div class="team-role">Artist</div>
             <div class="team-name">Dim</div>
@@ -33,13 +33,10 @@
         </div>
       </div>
     </div>
-    <Stars />
+    <img class="planet-brown" src="../assets/Planet_yellow.png" alt="">
+    <img class="cloud2" src="../assets/Cloud_1.png" alt="">
   </div>
 </template>
-
-<script setup lang="ts">
-import Stars from "./Stars.vue";
-</script>
 
 <style>
 .team-wrapper {
@@ -50,7 +47,9 @@ import Stars from "./Stars.vue";
   position: relative;
   margin: 0;
   overflow-x: hidden;
-  background: black;
+  background: url('../assets/Stars.png');
+  background-color: black;
+  padding-top: 5em;
 }
 .team-content-wrapper {
   display: flex;
@@ -103,6 +102,23 @@ import Stars from "./Stars.vue";
 .team-role {
   padding-top: 1em;
 }
+.planet-brown {
+  position: absolute;
+  top: -1%;
+  left: -5%;
+  z-index: 1000;
+  display: none;
+}
+.cloud2 {
+    background-size: contain;
+    width: 100%;
+    position: absolute;
+    top: -5em;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+    display: none;
+}
 /** general media queries */
 @media screen and (min-width: 601px) {
   .team-text {
@@ -117,6 +133,14 @@ import Stars from "./Stars.vue";
 @media screen and (min-height: 600px) and (max-width: 1080px) {
   .team-img {
     width: 50%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .planet-brown {
+    display: unset;
+  }
+  .cloud2 {
+    display: unset;
   }
 }
 /** desktop */
@@ -135,6 +159,9 @@ import Stars from "./Stars.vue";
   }
   .team-wrapper {
     padding-bottom: 10em;
+  }
+  .planet-brown {
+    left: 2%;
   }
 }
 @media screen and (min-width: 1500px) {

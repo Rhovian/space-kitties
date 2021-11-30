@@ -98,18 +98,11 @@
         </section>
       </div>
     </div>
-    <Stars />
+    <img class="buildings" src="../assets/Buildings_Foreground.png" alt="">
+    <img class="planet-blue" src="../assets/planet_blue.png" alt="">
+    <img class="cloud" src="../assets/Cloud_1.png" alt="">
   </div>
 </template>
-
-<script setup lang="ts">
-import Stars from "./Stars.vue";
-// import "./Roadmap.css";
-// import "./MobileOp.css";
-// @ts-ignore
-// import Aos from "vue-aos";
-// import "aos/dist/aos.css";
-</script>
 
 <style>
 .roadmap-wrapper {
@@ -121,6 +114,8 @@ import Stars from "./Stars.vue";
   margin: 0;
   overflow-x: hidden;
   padding: 0 0.75em;
+  background: url('../assets/Stars.png');
+  background-color: black;
 }
 .roadmap-content-wrapper {
   display: flex;
@@ -186,6 +181,30 @@ import Stars from "./Stars.vue";
   content: "";
   display: table;
   clear: both;
+}
+
+.buildings {
+  width: 100%;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.planet-blue {
+  position: absolute;
+  top: -5%;
+  right: -7.5%;
+  display: none;
+}
+.cloud {
+  background-size: contain;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.2;
+  display: none;
 }
 
 /* -------------------------------- 
@@ -427,6 +446,14 @@ Main components
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .planet-blue {
+    display: unset;
+  }
+  .cloud {
+    display: unset;
+  }
+}
 /** desktop */
 @media screen and (min-width: 1200px) {
   .roadmap-title {
@@ -443,6 +470,10 @@ Main components
   }
   .cd-timeline-img {
     left: 45%;
+  }
+  .planet-blue {
+    top: -4%;
+    right: -4%;
   }
 }
 
@@ -466,6 +497,10 @@ Main components
 @media screen and (min-width: 1600px) {
   .cd-timeline-img {
     left: 42.5%;
+  }
+  .planet-blue {
+    top: 0%;
+    right: 0%;
   }
 }
 /** desktop */

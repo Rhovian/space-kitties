@@ -44,16 +44,9 @@
         <img class="about-img" src="../assets/sk_11.jpg" alt="" />
       </div>
     </div>
-    <Stars />
+    <img class="planet-red" src="../assets/Planet_Red.png" alt="">
   </div>
 </template>
-
-<script setup lang="ts">
-import Stars from "./Stars.vue";
-// @ts-ignore
-// eslint-disable-next-line no-unused-vars
-import { sk_1 } from "../assets/sk_6.png";
-</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
@@ -62,7 +55,8 @@ import { sk_1 } from "../assets/sk_6.png";
 .about-wrapper {
   width: 100%;
   height: 100%;
-  background: transparent;
+  background: url('../assets/Stars.png');
+  background-color: black;
   padding: 0.5em 0;
   display: flex;
   justify-content: center;
@@ -71,6 +65,7 @@ import { sk_1 } from "../assets/sk_6.png";
   z-index: 10;
   position: relative;
   padding-bottom: 0;
+  position: relative;
 }
 .about-content-wrapper {
   display: flex;
@@ -119,7 +114,25 @@ import { sk_1 } from "../assets/sk_6.png";
   letter-spacing: 2px;
   color: #d9fbff;
 }
-
+.planet-red {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: rotate 5s infinite;
+  z-index: 10;
+  display: none;
+}
+@keyframes rotate {
+  0% {
+    transform: rotateZ(5deg);
+  }
+  50% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(5deg);
+  }
+}
 @keyframes scroll {
   0% {
     transform: translateX(0px);
@@ -159,6 +172,9 @@ import { sk_1 } from "../assets/sk_6.png";
   }
   .about-text {
     padding: 0.5em 7.5em;
+  }
+  .planet-red {
+    display: unset;
   }
 }
 /** desktop */

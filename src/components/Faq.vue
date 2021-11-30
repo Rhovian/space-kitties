@@ -65,13 +65,11 @@
         </div>
       </div>
     </div>
-    <Stars />
+    <img class="comet3" src="../assets/Comet_1.png" alt="">
+    <img class="comet4" src="../assets/Comet_1.png" alt="">
+
   </div>
 </template>
-
-<script setup lang="ts">
-import Stars from "./Stars.vue";
-</script>
 
 <style>
 .faq-wrapper {
@@ -80,9 +78,11 @@ import Stars from "./Stars.vue";
   background: transparent;
   z-index: 10;
   position: relative;
-  padding: 0 0.75em 5em 0;
+  padding: 0 0.75em 0 0;
   margin: 0;
   overflow-x: hidden;
+  background: url('../assets/Stars.png');
+  background-color: black;
 }
 .faq-content-wrapper {
   display: flex;
@@ -121,6 +121,61 @@ import Stars from "./Stars.vue";
   letter-spacing: 2px;
   color: #d9fbff;
 }
+.comet3 {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  -webkit-animation: falling3 5s 0s infinite;
+  z-index: 10;
+  display: none;
+}
+.comet4 {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  -webkit-animation: falling4 5s 3s infinite;
+  z-index: 10;
+  display: none;
+}
+@-webkit-keyframes falling3 {
+
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+
+  3% {
+    -webkit-transform:
+    translate3d(0px,0px, 0); 
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform:
+    translate3d(-500px,1000px,0) rotate(10deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes falling4 {
+
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  3% {
+    -webkit-transform:
+    translate3d(0px,0px, 0); 
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform:
+    translate3d(-850px,1000px,0) rotate(10deg);
+    opacity: 0;
+  }
+}
 /** general media queries */
 @media screen and (min-width: 600px) {
   .faq-text {
@@ -129,6 +184,14 @@ import Stars from "./Stars.vue";
   .faq-title {
     font-size: 2em;
     line-height: 1.5em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .comet3 {
+    display: unset;
+  }
+  .comet4 {
+    display: unset;
   }
 }
 /** desktop */

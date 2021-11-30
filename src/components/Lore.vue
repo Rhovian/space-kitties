@@ -17,22 +17,12 @@
         set out a world-wide warrant for all Time-Travelling Anime Villains to
         be captured, dead or alive.
       </div>
-      <br />
-      <div class="lore-text" data-aos="fade-left">
-        Equipped with their own unique stat sheets, equipment and weapons, each
-        and every Villain has an undeniable thirst for power. To increase their
-        own stats and rank Villains seek out and complete missions throughout
-        the city to plot their ascent to the Legendary SSS rank and become the
-        dominant villains of their story.
-      </div>
     </div>
-    <Stars />
+    <img class ="comet" src="../assets/comet_2.png" alt="">
+    <img class ="comet2" src="../assets/comet_2.png" alt="">
+
   </div>
 </template>
-
-<script setup lang="ts">
-import Stars from "./Stars.vue";
-</script>
 
 <style>
 .lore-wrapper {
@@ -42,6 +32,8 @@ import Stars from "./Stars.vue";
   z-index: 10;
   position: relative;
   padding-top: 2.5em;
+  background: url('../assets/Stars.png');
+  background-color: black;
 }
 .lore-content-wrapper {
   display: flex;
@@ -71,6 +63,61 @@ import Stars from "./Stars.vue";
   width: 85%;
   padding: 2em;
 }
+.comet {
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  -webkit-animation: falling 5s 0s infinite;
+  z-index: 10;
+  display: none;
+}
+.comet2 {
+  position: absolute;
+  top: -30%;
+  right: -30%;
+  -webkit-animation: falling2 5s 3s infinite;
+  z-index: 10;
+  display: none;
+}
+@-webkit-keyframes falling {
+
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  3% {
+    -webkit-transform:
+    translate3d(0px,0px, 0); 
+    opacity: 0.5;
+  }
+  75% {
+    -webkit-transform:
+    translate3d(-350px,900px,0) rotate(-30deg);
+    opacity: 0.25;
+  }
+  100% {
+    -webkit-transform:
+    translate3d(-350px,1200px,0) rotate(-30deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes falling2 {
+
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+
+  3% {
+    -webkit-transform:
+    translate3d(0px,0px, 0); 
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform:
+    translate3d(-850px,900px,0) rotate(-30deg);
+    opacity: 0;
+  }
+}
 @media screen and (min-width: 600px) {
   .lore-text {
     font-size: 1.25em;
@@ -84,6 +131,12 @@ import Stars from "./Stars.vue";
 @media screen and (min-width: 1000px) {
   .lore-text {
     padding: 0.5em 7.5em;
+  }
+  .comet {
+    display: unset;
+  }
+  .comet2 {
+    display: unset;
   }
 }
 @media screen and (min-width: 1200px) {
