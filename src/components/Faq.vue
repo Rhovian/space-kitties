@@ -65,9 +65,8 @@
         </div>
       </div>
     </div>
-    <img class="comet3" src="../assets/Comet_1.png" alt="">
-    <img class="comet4" src="../assets/Comet_1.png" alt="">
-
+    <img class="comet3" src="../assets/Comet_1.png" alt="" />
+    <img class="comet4" src="../assets/Comet_1.png" alt="" />
   </div>
 </template>
 
@@ -81,7 +80,7 @@
   padding: 0 0.75em 0 0;
   margin: 0;
   overflow-x: hidden;
-  background: url('../assets/Stars.png');
+  background: url("../assets/Stars.png");
   background-color: black;
 }
 .faq-content-wrapper {
@@ -142,37 +141,31 @@
   display: none;
 }
 @-webkit-keyframes falling3 {
-
   0% {
     -webkit-transform: translate3d(0px, 0px, 0px);
     opacity: 1;
   }
 
   3% {
-    -webkit-transform:
-    translate3d(0px,0px, 0); 
+    -webkit-transform: translate3d(0px, 0px, 0);
     opacity: 0.5;
   }
   100% {
-    -webkit-transform:
-    translate3d(-500px,1000px,0) rotate(10deg);
+    -webkit-transform: translate3d(-500px, 1000px, 0) rotate(10deg);
     opacity: 0;
   }
 }
 @-webkit-keyframes falling4 {
-
   0% {
     -webkit-transform: translate3d(0px, 0px, 0px);
   }
 
   3% {
-    -webkit-transform:
-    translate3d(0px,0px, 0); 
+    -webkit-transform: translate3d(0px, 0px, 0);
     opacity: 0.5;
   }
   100% {
-    -webkit-transform:
-    translate3d(-850px,1000px,0) rotate(10deg);
+    -webkit-transform: translate3d(-850px, 1000px, 0) rotate(10deg);
     opacity: 0;
   }
 }

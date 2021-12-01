@@ -33,8 +33,8 @@
         </div>
       </div>
     </div>
-    <img class="planet-brown" src="../assets/Planet_yellow.png" alt="">
-    <img class="cloud2" src="../assets/Cloud_1.png" alt="">
+    <img class="planet-brown" src="../assets/Planet_yellow.png" alt="" />
+    <img class="cloud2" src="../assets/Cloud_1.png" alt="" />
   </div>
 </template>
 
@@ -47,7 +47,7 @@
   position: relative;
   margin: 0;
   overflow-x: hidden;
-  background: url('../assets/Stars.png');
+  background: url("../assets/Stars.png");
   background-color: black;
   padding-top: 5em;
 }
@@ -110,14 +110,14 @@
   display: none;
 }
 .cloud2 {
-    background-size: contain;
-    width: 100%;
-    position: absolute;
-    top: -5em;
-    left: 0;
-    z-index: -1;
-    opacity: 0.2;
-    display: none;
+  background-size: contain;
+  width: 100%;
+  position: absolute;
+  top: -5em;
+  left: 0;
+  z-index: -1;
+  opacity: 0.2;
+  display: none;
 }
 /** general media queries */
 @media screen and (min-width: 601px) {
@@ -132,7 +132,7 @@
 /** tablet landscape */
 @media screen and (min-height: 600px) and (max-width: 1080px) {
   .team-img {
-    width: 50%;
+    width: 75%;
   }
 }
 @media screen and (min-width: 1000px) {

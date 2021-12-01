@@ -18,9 +18,8 @@
         be captured, dead or alive.
       </div>
     </div>
-    <img class ="comet" src="../assets/comet_2.png" alt="">
-    <img class ="comet2" src="../assets/comet_2.png" alt="">
-
+    <img class="comet" src="../assets/comet_2.png" alt="" />
+    <img class="comet2" src="../assets/comet_2.png" alt="" />
   </div>
 </template>
 
@@ -32,7 +31,7 @@
   z-index: 10;
   position: relative;
   padding-top: 2.5em;
-  background: url('../assets/Stars.png');
+  background: url("../assets/Stars.png");
   background-color: black;
 }
 .lore-content-wrapper {
@@ -80,41 +79,34 @@
   display: none;
 }
 @-webkit-keyframes falling {
-
   0% {
     -webkit-transform: translate3d(0px, 0px, 0px);
   }
 
   3% {
-    -webkit-transform:
-    translate3d(0px,0px, 0); 
+    -webkit-transform: translate3d(0px, 0px, 0);
     opacity: 0.5;
   }
   75% {
-    -webkit-transform:
-    translate3d(-350px,900px,0) rotate(-30deg);
+    -webkit-transform: translate3d(-350px, 900px, 0) rotate(-30deg);
     opacity: 0.25;
   }
   100% {
-    -webkit-transform:
-    translate3d(-350px,1200px,0) rotate(-30deg);
+    -webkit-transform: translate3d(-350px, 1200px, 0) rotate(-30deg);
     opacity: 0;
   }
 }
 @-webkit-keyframes falling2 {
-
   0% {
     -webkit-transform: translate3d(0px, 0px, 0px);
   }
 
   3% {
-    -webkit-transform:
-    translate3d(0px,0px, 0); 
+    -webkit-transform: translate3d(0px, 0px, 0);
     opacity: 0.5;
   }
   100% {
-    -webkit-transform:
-    translate3d(-850px,900px,0) rotate(-30deg);
+    -webkit-transform: translate3d(-850px, 900px, 0) rotate(-30deg);
     opacity: 0;
   }
 }

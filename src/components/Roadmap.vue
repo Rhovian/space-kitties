@@ -98,9 +98,9 @@
         </section>
       </div>
     </div>
-    <img class="buildings" src="../assets/Buildings_Foreground.png" alt="">
-    <img class="planet-blue" src="../assets/planet_blue.png" alt="">
-    <img class="cloud" src="../assets/Cloud_1.png" alt="">
+    <img class="buildings" src="../assets/Buildings_Foreground.png" alt="" />
+    <img class="planet-blue" src="../assets/planet_blue.png" alt="" />
+    <img class="cloud" src="../assets/Cloud_1.png" alt="" />
   </div>
 </template>
 
@@ -114,7 +114,7 @@
   margin: 0;
   overflow-x: hidden;
   padding: 0 0.75em;
-  background: url('../assets/Stars.png');
+  background: url("../assets/Stars.png");
   background-color: black;
 }
 .roadmap-content-wrapper {

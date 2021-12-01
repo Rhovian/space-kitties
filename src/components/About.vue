@@ -15,14 +15,14 @@
       </div>
     </div>
     <div class="about-content-wrapper about-img-wrapper-mobile">
-      <div class="about-img-row">
+      <div class="about-img-row-mobile">
         <img class="about-img" src="../assets/sk_1.jpg" alt="" />
         <img class="about-img" src="../assets/sk_2.jpg" alt="" />
         <img class="about-img" src="../assets/sk_3.jpg" alt="" />
         <img class="about-img" src="../assets/sk_7.jpg" alt="" />
         <img class="about-img" src="../assets/sk_8.png" alt="" />
       </div>
-      <div class="about-img-row about-img-row-alternate">
+      <div class="about-img-row-mobile about-img-row-alternate">
         <img class="about-img" src="../assets/sk_4.jpg" alt="" />
         <img class="about-img" src="../assets/sk_5.jpg" alt="" />
         <img class="about-img" src="../assets/sk_6.png" alt="" />
@@ -44,7 +44,7 @@
         <img class="about-img" src="../assets/sk_11.jpg" alt="" />
       </div>
     </div>
-    <img class="planet-red" src="../assets/Planet_Red.png" alt="">
+    <img class="planet-red" src="../assets/Planet_Red.png" alt="" />
   </div>
 </template>
 
@@ -55,7 +55,7 @@
 .about-wrapper {
   width: 100%;
   height: 100%;
-  background: url('../assets/Stars.png');
+  background: url("../assets/Stars.png");
   background-color: black;
   padding: 0.5em 0;
   display: flex;
@@ -89,10 +89,16 @@
   line-height: 0;
   animation: scroll 25s linear infinite;
 }
+.about-img-row-mobile {
+  display: flex;
+  width: 100%;
+  line-height: 0;
+  animation: scroll 17s linear infinite;
+}
 .about-img-row-alternate {
   display: flex;
   flex-direction: row-reverse;
-  animation: scroll-alternate 25s linear infinite;
+  animation: scroll-alternate 17s linear infinite;
 }
 .about-img {
   width: 50vw;
