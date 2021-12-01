@@ -98,7 +98,6 @@
         </section>
       </div>
     </div>
-    <img class="buildings" src="../assets/Buildings_Foreground.png" alt="" />
     <img class="planet-blue" src="../assets/planet_blue.png" alt="" />
     <img class="cloud" src="../assets/Cloud_1.png" alt="" />
   </div>
@@ -182,14 +181,6 @@
   display: table;
   clear: both;
 }
-
-.buildings {
-  width: 100%;
-  background-size: contain;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
 .planet-blue {
   position: absolute;
   top: -5%;
@@ -221,9 +212,9 @@ Main components
 #cd-timeline::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 4%;
   left: 25px;
-  height: 100%;
+  height: 80%;
   width: 4px;
   background: #d761ed;
   border-radius: 3px;
@@ -249,6 +240,14 @@ Main components
   #cd-timeline::before {
     left: 50%;
     margin-left: -2px;
+    top: 10%;
+    height: 80%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  #cd-timeline::before {
+    top: 7.5%;
   }
 }
 
@@ -496,7 +495,7 @@ Main components
 
 @media screen and (min-width: 1600px) {
   .cd-timeline-img {
-    left: 42.5%;
+    left: 43.5%;
   }
   .planet-blue {
     top: 0%;

@@ -16,6 +16,7 @@
   background: rgb(133, 61, 189, 0.2);
   filter: drop-shadow(0 0 0.1rem #ba87ff);
   border-top: 2px solid #ba87ff;
+  position: relative;
 }
 .footer-content-wrapper {
   display: flex;

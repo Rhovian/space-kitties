@@ -167,8 +167,8 @@
 }
 @media screen and (min-width: 1000px) {
   .about-img {
-    width: 25vw;
-    height: 25vw;
+    width: 21.5vw;
+    height: 21.5vw;
   }
   .about-img-wrapper-mobile {
     display: none;

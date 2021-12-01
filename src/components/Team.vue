@@ -35,6 +35,7 @@
     </div>
     <img class="planet-brown" src="../assets/Planet_yellow.png" alt="" />
     <img class="cloud2" src="../assets/Cloud_1.png" alt="" />
+    <img class="buildings" src="../assets/Buildings_Foreground.png" alt="" />
   </div>
 </template>
 
@@ -118,6 +119,13 @@
   z-index: -1;
   opacity: 0.2;
   display: none;
+}
+.buildings {
+  width: 100%;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 /** general media queries */
 @media screen and (min-width: 601px) {
