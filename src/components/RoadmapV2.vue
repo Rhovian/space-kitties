@@ -167,7 +167,6 @@
   .roadmap-v2-title {
     padding-bottom: 1em;
   }
-
 }
 @media screen and (min-width: 1200px) {
   .roadmap-v2-wrapper {

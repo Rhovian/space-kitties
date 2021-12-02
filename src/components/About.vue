@@ -17,30 +17,46 @@
     <div class="about-content-wrapper about-img-wrapper-mobile">
       <div class="about-img-row-mobile">
         <img class="about-img" src="../assets/sk_1.jpg" alt="" />
+        <img class="about-img" src="../assets/50.png" alt="" />
         <img class="about-img" src="../assets/sk_2.jpg" alt="" />
         <img class="about-img" src="../assets/sk_3.jpg" alt="" />
+        <img class="about-img" src="../assets/177.png" alt="" />
         <img class="about-img" src="../assets/sk_7.jpg" alt="" />
+        <img class="about-img" src="../assets/66.png" alt="" />
         <img class="about-img" src="../assets/sk_8.png" alt="" />
+        <img class="about-img" src="../assets/125.png" alt="" />
       </div>
       <div class="about-img-row-mobile about-img-row-alternate">
         <img class="about-img" src="../assets/sk_4.jpg" alt="" />
+        <img class="about-img" src="../assets/53.png" alt="" />
         <img class="about-img" src="../assets/sk_5.jpg" alt="" />
         <img class="about-img" src="../assets/sk_6.png" alt="" />
         <img class="about-img" src="../assets/sk_10.jpg" alt="" />
+        <img class="about-img" src="../assets/82.png" alt="" />
         <img class="about-img" src="../assets/sk_11.jpg" alt="" />
+        <img class="about-img" src="../assets/197.png" alt="" />
+        <img class="about-img" src="../assets/58.png" alt="" />
       </div>
     </div>
     <div class="about-content-wrapper about-img-wrapper-desktop">
       <div class="about-img-row">
         <img class="about-img" src="../assets/sk_1.jpg" alt="" />
+        <img class="about-img" src="../assets/50.png" alt="" />
         <img class="about-img" src="../assets/sk_2.jpg" alt="" />
+        <img class="about-img" src="../assets/177.png" alt="" />
         <img class="about-img" src="../assets/sk_3.jpg" alt="" />
+        <img class="about-img" src="../assets/66.png" alt="" />
         <img class="about-img" src="../assets/sk_7.jpg" alt="" />
+        <img class="about-img" src="../assets/125.png" alt="" />
         <img class="about-img" src="../assets/sk_8.png" alt="" />
+        <img class="about-img" src="../assets/53.png" alt="" />
         <img class="about-img" src="../assets/sk_4.jpg" alt="" />
+        <img class="about-img" src="../assets/58.png" alt="" />
         <img class="about-img" src="../assets/sk_5.jpg" alt="" />
+        <img class="about-img" src="../assets/82.png" alt="" />
         <img class="about-img" src="../assets/sk_6.png" alt="" />
         <img class="about-img" src="../assets/sk_10.jpg" alt="" />
+        <img class="about-img" src="../assets/197.png" alt="" />
         <img class="about-img" src="../assets/sk_11.jpg" alt="" />
       </div>
     </div>
@@ -87,18 +103,18 @@
   display: flex;
   width: 100%;
   line-height: 0;
-  animation: scroll 25s linear infinite;
+  animation: scroll 120s linear infinite;
 }
 .about-img-row-mobile {
   display: flex;
   width: 100%;
   line-height: 0;
-  animation: scroll 17s linear infinite;
+  animation: scroll-alternate-alternate 60s linear infinite;
 }
 .about-img-row-alternate {
   display: flex;
   flex-direction: row-reverse;
-  animation: scroll-alternate 17s linear infinite;
+  animation: scroll-alternate 60s linear infinite;
 }
 .about-img {
   width: 50vw;
@@ -144,7 +160,7 @@
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-290%);
   }
 }
 @keyframes scroll-alternate {
@@ -152,7 +168,15 @@
     transform: translateX(0px);
   }
   100% {
-    transform: translateX(50%);
+    transform: translateX(300%);
+  }
+}
+@keyframes scroll-alternate-alternate {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-300%);
   }
 }
 /** tablet portrait */
