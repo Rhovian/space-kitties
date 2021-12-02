@@ -1,6 +1,6 @@
 <template>
   <div class="roadmap-v2-wrapper">
-    <div class="roadmap-v2-inner-wrapper">
+    <div class="roadmap-v2-inner-wrapper roadmap-v2-inner-wrapper-moon">
       <img
         id="moon"
         src="http://www.clker.com/cliparts/8/4/7/a/12279737022024966533rg1024_Moon_in_comic_style.svg"
@@ -14,7 +14,7 @@
         />
       </div>
     </div>
-    <div class="roadmap-v2-inner-wrapper">
+    <div class="roadmap-v2-inner-wrapper roadmap-v2-inner-wrapper-text">
       <div class="roadmap-v2-info-wrapper">
         <div class="roadmap-v2-title">Roadmap V2</div>
         <div class="roadmap-v2-text">
@@ -30,19 +30,16 @@
 
 <style>
 .roadmap-v2-wrapper {
-  width: 100vw;
-  height: 100vh;
-  border-top: 2px solid #18cae6;
-  border-bottom: 2px solid #18cae6;
-  filter: drop-shadow(0 0 0.1rem #18cae6);
+  width: 80%;
+  height: 100%;
+  margin: 2.5em auto;
   display: flex;
   flex-direction: column-reverse;
   padding: 2em 0;
-  background: rgb(24, 202, 230, 0.1)
-    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
-    center;
   z-index: -1;
   margin-bottom: 5em;
+  margin-top: 0;
+  background: url("../assets/Stars.png");
 }
 .roadmap-v2-inner-wrapper {
   flex-grow: 1;
@@ -51,7 +48,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1em;
+  padding-top: 7.5em;
+}
+.roadmap-v2-inner-wrapper-text {
+  border: 2px solid #18cae6;
+  filter: drop-shadow(0 0 0.1rem #18cae6);
+  background: rgb(24, 202, 230, 0.1)
+    url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+    center;
+  border-radius: 15px;
+  padding: 2em 0;
 }
 .roadmap-v2-info-wrapper {
   display: flex;
@@ -65,12 +71,12 @@
   line-height: 30px;
   color: #601b9f;
   filter: drop-shadow(0 0 0.2rem #601b9f);
-  font-size: 1.75em;
+  font-size: 1.25em;
 }
 .roadmap-v2-text {
   font-family: "Orbitron", sans-serif;
-  font-size: 1.15em;
-  padding: 1.5em 2em;
+  font-size: 1em;
+  padding: 1.25em 1.5em;
   text-align: center;
   letter-spacing: 2px;
   color: #d9fbff;
@@ -137,11 +143,31 @@
     font-size: 2.25em;
   }
   .roadmap-v2-text {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
   .roadmap-v2-wrapper {
     height: 75vh;
   }
+  .roadmap-v2-inner-wrapper-moon {
+    padding-top: 0;
+  }
+  .roadmap-v2-inner-wrapper-text {
+    background: unset;
+    filter: unset;
+    border: unset;
+  }
+  .roadmap-v2-wrapper {
+    border: 2px solid #18cae6;
+    filter: drop-shadow(0 0 0.1rem #18cae6);
+    background: rgb(24, 202, 230, 0.1)
+      url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top
+      center;
+    border-radius: 15px;
+  }
+  .roadmap-v2-title {
+    padding-bottom: 1em;
+  }
+
 }
 @media screen and (min-width: 1200px) {
   .roadmap-v2-wrapper {

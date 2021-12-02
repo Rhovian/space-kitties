@@ -89,7 +89,6 @@ import Mint from "./web3/Mint.vue";
   display: flex;
   justify-content: center;
   color: #92d3cd;
-
 }
 @media screen and (min-width: 1024px) {
   .mint-title {
