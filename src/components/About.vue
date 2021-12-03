@@ -117,8 +117,8 @@
   animation: scroll-alternate 60s linear infinite;
 }
 .about-img {
-  width: 50vw;
-  height: 50vw;
+  width: 55vw;
+  height: 55vw;
 }
 .about-title {
   font-family: "Press Start 2P", cursive;
