@@ -80,7 +80,7 @@
   padding: 0 0.75em 0 0;
   margin: 0;
   overflow-x: hidden;
-  background: url("../assets/Stars.png");
+  background: url("../assets/Clouds_1.gif");
   background-color: black;
 }
 .faq-content-wrapper {

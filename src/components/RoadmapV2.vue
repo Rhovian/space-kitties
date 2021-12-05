@@ -1,4 +1,5 @@
 <template>
+<div class="roadmap-v2-outer-wrapper">
   <div class="roadmap-v2-wrapper">
     <div class="roadmap-v2-inner-wrapper roadmap-v2-inner-wrapper-moon">
       <img
@@ -26,9 +27,13 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <style>
+.roadmap-v2-outer-wrapper {
+  background: url("../assets/Clouds_1.gif");
+}
 .roadmap-v2-wrapper {
   width: 80%;
   height: 100%;
@@ -39,7 +44,6 @@
   z-index: -1;
   margin-bottom: 5em;
   margin-top: 0;
-  background: url("../assets/Stars.png");
 }
 .roadmap-v2-inner-wrapper {
   flex-grow: 1;

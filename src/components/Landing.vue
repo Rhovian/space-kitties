@@ -2,7 +2,7 @@
   <div class="landing-wrapper">
     <div class="landing-inner-wrapper">
       <div class="landing-content-wrapper">
-        <img class="logo" src="../assets/sk_logo.png" alt="" />
+        <img class="logo" data-aos="slide-down" data-aos-offset="500" src="../assets/sk_logo.png" alt="" />
       </div>
     </div>
   </div>

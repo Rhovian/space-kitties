@@ -99,7 +99,9 @@
       </div>
     </div>
     <img class="planet-blue" src="../assets/planet_blue.png" alt="" />
+    <!-- 
     <img class="cloud" src="../assets/Cloud_1.png" alt="" />
+    -->
   </div>
 </template>
 
@@ -113,7 +115,7 @@
   margin: 0;
   overflow-x: hidden;
   padding: 0 0.75em;
-  background: url("../assets/Stars.png");
+  background: url("../assets/Clouds_1.gif");
   background-color: black;
 }
 .roadmap-content-wrapper {

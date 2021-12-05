@@ -31,7 +31,7 @@ import Mint from "./web3/Mint.vue";
 
 <style>
 .mint-wrapper {
-  background: url("../assets/Stars.png");
+  background: url("../assets/Clouds_1.gif");
 }
 .mint-section-wrapper {
   width: 75%;

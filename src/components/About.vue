@@ -71,7 +71,7 @@
 .about-wrapper {
   width: 100%;
   height: 100%;
-  background: url("../assets/Stars.png");
+  background: url("../assets/Clouds_1.gif");
   background-color: black;
   padding: 0.5em 0;
   display: flex;

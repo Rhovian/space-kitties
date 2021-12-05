@@ -34,7 +34,9 @@
       </div>
     </div>
     <img class="planet-brown" src="../assets/Planet_yellow.png" alt="" />
-    <img class="cloud2" src="../assets/Cloud_1.png" alt="" />
+    <!-- 
+      <img class="cloud2" src="../assets/Cloud_1.png" alt="" />
+    -->
     <img class="buildings" src="../assets/Buildings_Foreground.png" alt="" />
   </div>
 </template>
@@ -48,7 +50,7 @@
   position: relative;
   margin: 0;
   overflow-x: hidden;
-  background: url("../assets/Stars.png");
+  background: url("../assets/Clouds_1.gif");
   background-color: black;
   padding-top: 5em;
 }

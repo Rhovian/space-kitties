@@ -31,7 +31,7 @@
   z-index: 10;
   position: relative;
   padding-top: 2.5em;
-  background: url("../assets/Stars.png");
+  background: url("../assets/Clouds_1.gif");
   background-color: black;
 }
 .lore-content-wrapper {
