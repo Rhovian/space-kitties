@@ -1,33 +1,33 @@
 <template>
-<div class="roadmap-v2-outer-wrapper">
-  <div class="roadmap-v2-wrapper">
-    <div class="roadmap-v2-inner-wrapper roadmap-v2-inner-wrapper-moon">
-      <img
-        id="moon"
-        src="http://www.clker.com/cliparts/8/4/7/a/12279737022024966533rg1024_Moon_in_comic_style.svg"
-        alt="moon"
-      />
-      <div class="rocket">
+  <div class="roadmap-v2-outer-wrapper">
+    <div class="roadmap-v2-wrapper">
+      <div class="roadmap-v2-inner-wrapper roadmap-v2-inner-wrapper-moon">
         <img
-          src="https://maxcdn.icons8.com/Share/icon/Transport//rocket1600.png"
-          alt="rocket"
-          width="20%"
+          id="moon"
+          src="http://www.clker.com/cliparts/8/4/7/a/12279737022024966533rg1024_Moon_in_comic_style.svg"
+          alt="moon"
         />
+        <div class="rocket">
+          <img
+            src="https://maxcdn.icons8.com/Share/icon/Transport//rocket1600.png"
+            alt="rocket"
+            width="20%"
+          />
+        </div>
       </div>
-    </div>
-    <div class="roadmap-v2-inner-wrapper roadmap-v2-inner-wrapper-text">
-      <div class="roadmap-v2-info-wrapper">
-        <div class="roadmap-v2-title">Roadmap V2</div>
-        <div class="roadmap-v2-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint magnam
-          nemo velit hic mollitia veritatis totam adipisci illum minus error
-          ratione ea, corporis sit tempore dolorum in accusantium nesciunt
-          inventore!
+      <div class="roadmap-v2-inner-wrapper roadmap-v2-inner-wrapper-text">
+        <div class="roadmap-v2-info-wrapper">
+          <div class="roadmap-v2-title">Roadmap V2</div>
+          <div class="roadmap-v2-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint magnam
+            nemo velit hic mollitia veritatis totam adipisci illum minus error
+            ratione ea, corporis sit tempore dolorum in accusantium nesciunt
+            inventore!
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <style>

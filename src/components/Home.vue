@@ -21,9 +21,4 @@ import Landing from "./Landing.vue";
   background: url("../assets/Space_kitties.gif") 20%;
   background-size: cover;
 }
-@media screen and (min-width: 1280px) {
-  .home {
-    background-size: contain;
-  }
-}
 </style>
