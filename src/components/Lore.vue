@@ -3,19 +3,16 @@
     <div class="lore-content-wrapper">
       <h2 class="lore-title" data-aos="fade-right">Lore</h2>
       <div class="lore-text" data-aos="fade-left">
-        In a metaverse far far away the ongoing battle between decentralized
-        good and evil has torn space time apart, splitting and fusing realities
-        together. Wormholes have formed as a result of the intense fighting and
-        now Villains from various timezones and parallel universes have been
-        transported into our universe.
+        Space kitties are the infamous space pirates of the galactic Kittyverse.
+        Born into a time of strife Space Kitties have adapted and thrive in the
+        outer rims of civilization, learning how to loot, salvage and repair
+        equipment left by ancient civilizations and unsuspecting merchants.
       </div>
       <br />
       <div class="lore-text" data-aos="fade-left">
-        After careful observation, Earth authorities have categorized each
-        villain by their ‘Disaster Rank’ ranging from C to SSS. Authorities have
-        also labelled these villains to be extremely disruptive to society and
-        set out a world-wide warrant for all Time-Travelling Anime Villains to
-        be captured, dead or alive.
+        Each Space Kitty is uniquely battle tested, and their Mech piloting
+        skills are second-to-none. Living by their own rules every Space Kitty
+        does their best to add even more loot to their treasure box every day.
       </div>
     </div>
     <img class="comet" src="../assets/comet_2.png" alt="" />

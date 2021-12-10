@@ -23,33 +23,18 @@
             class="faq-title title-purple faq-padding-right"
             data-aos="fade-left"
           >
-            Will there be a presale?
+            When is the public launch date?
           </h3>
           <div class="faq-text" data-aos="fade-right">
-            Yes! Details of the presale will be announced soon. In the meantime
-            though, rumor has spread that those who are more active in the
-            discord will be first picks for the whitelist. Whitelist selection
-            will close 10 days before launch.
+            Public Mint for all will be Dec 12.
           </div>
         </div>
         <div class="faq-inner-content-wrapper">
           <h3 class="faq-title title-pink" data-aos="fade-right">
-            When is the public launch date?
-          </h3>
-          <div class="faq-text" data-aos="fade-left">
-            Time Traveling Anime Villains will be available for minting December
-            12th.
-          </div>
-        </div>
-        <div class="faq-inner-content-wrapper">
-          <h3
-            class="faq-title title-purple faq-title-padding"
-            data-aos="fade-left"
-          >
             How much will each one cost?
           </h3>
-          <div class="faq-text" data-aos="fade-right">
-            Each Villain will cost .05 eth at Mint.
+          <div class="faq-text" data-aos="fade-left">
+            Each Space Kitty with be 1 Sol.
           </div>
         </div>
         <div class="faq-inner-content-wrapper">
@@ -57,10 +42,33 @@
             Will there be any special utility?
           </h3>
           <div class="faq-text" data-aos="fade-left">
-            Your Villain is your passport to the Villainverse. Not only does it
-            unlock the airdrop for the Villainverse stat sheet, it will also
-            grant you access to the Den and be a critical part of the upcoming
-            game.
+            Your Space Kitty is your passport to the Galactic Kittyverse. Not
+            only does it unlock the airdrop for the Villainverse stat sheet, it
+            will also grant you access to the Den and be a critical part of the
+            upcoming game.
+          </div>
+        </div>
+        <div class="faq-inner-content-wrapper">
+          <h3 class="faq-title title-pink" data-aos="fade-right">
+            Where can I buy a Space Kitty?
+          </h3>
+          <div class="faq-text" data-aos="fade-left">
+            You will only be able to participate in the presale on our official
+            website. After the initial minting process, you will be able to
+            trade your Villains on Solanart and other Platforms. The website
+            will be revealed soon. Stay ready.
+          </div>
+        </div>
+        <div class="faq-inner-content-wrapper">
+          <h3 class="faq-title title-pink" data-aos="fade-right">
+            Who are the Space Kitty Captains?
+          </h3>
+          <div class="faq-text" data-aos="fade-left">
+            We’re a team of nerds who are passionate about crypto, anime, and
+            gaming. We see NFTs as the future of both gaming and IP development
+            and are excited to make our dreams come to life with this project.
+            Make sure to join the Discord for more information on the team’s
+            plans!
           </div>
         </div>
       </div>

@@ -12,12 +12,12 @@
             <div class="cd-timeline-content" data-aos="fade-right">
               <div class="rm-top">
                 <div class="rm-text">
-                  <h2>20% Sold</h2>
+                  <h2>25% Sold</h2>
                 </div>
               </div>
               <p>
-                Access to the den will be opened, and all the TTAV holders will
-                gain access.
+                Access to the Kitty HQ will be opened, and all Space Kitty
+                holders will gain access
               </p>
             </div>
           </div>
@@ -33,12 +33,12 @@
             <div class="cd-timeline-content" data-aos="fade-left">
               <div class="rm-top">
                 <div class="rm-text">
-                  <h2>40% Sold</h2>
+                  <h2>50% Sold</h2>
                 </div>
               </div>
               <p>
                 Whitelist access granted to all original minters for future
-                projects.
+                releases
               </p>
             </div>
           </div>
@@ -50,15 +50,12 @@
             <div class="cd-timeline-content" data-aos="fade-right">
               <div class="rm-top">
                 <div class="rm-text">
-                  <h2>60% Sold</h2>
+                  <h2>75% Sold</h2>
                 </div>
               </div>
               <p>
-                All current holders at snapshot time will be airdropped a
-                special character stat sheet (similar to loot).
-                <br />
-                <br />
-                Epic or legendary villains will receive epic stat sheets.
+                Space Kitties listed on Solanart and other trading Platforms
+                along with rarity info
               </p>
             </div>
           </div>
@@ -69,29 +66,12 @@
             <div class="cd-timeline-content" data-aos="fade-left">
               <div class="rm-top">
                 <div class="rm-text">
-                  <h2>80% Sold</h2>
-                </div>
-              </div>
-              <p>
-                Founders receive ttav tattoos, development on the p2e card game,
-                the villainverse will begin.
-              </p>
-            </div>
-          </div>
-          <div class="cd-timeline-block">
-            <div class="cd-timeline-img cd-movie">
-              <img class="roadmap-moon" src="../assets/mars.svg" alt="" />
-            </div>
-
-            <div class="cd-timeline-content" data-aos="fade-right">
-              <div class="rm-top">
-                <div class="rm-text">
                   <h2>100% Sold</h2>
                 </div>
               </div>
               <p>
-                Villains will be fully integrated into the sandbox and the den
-                will be built out in its own plot of land.
+                2nd Gen EXODUS release confirmed. Kitties? Pilots?? Mechs???
+                P2E???? Stay tuned!
               </p>
             </div>
           </div>
@@ -243,7 +223,7 @@ Main components
     left: 50%;
     margin-left: -2px;
     top: 10%;
-    height: 80%;
+    height: 75%;
   }
 }
 

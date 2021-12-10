@@ -3,15 +3,12 @@
     <div class="about-content-wrapper">
       <h3 class="about-title" data-aos="fade-left">What are Space Kitties?</h3>
       <div class="about-text" data-aos="fade-right">
-        The Time Traveling Anime Villains are a collection of 10,000 NFTs -
-        unique digital collectibles that live on the Ethereum blockchain.
-      </div>
-      <br />
-      <div class="about-text" data-aos="fade-right">
-        Your villain doubles as a membership pass that grants you access to the
-        Den, an exclusive club where Villains will get assigned missions, earn
-        prizes, and much more. Future features and perks will be integrated with
-        roadmap unlocks.
+        Space Kitties is a collection of 6666 NFTs - unique digital collectibles
+        that live on the Solana blockchain. Your Space Kitty doubles as a
+        membership pass that grants you access to The Kitty HQ, an exclusive
+        club where staked Space Kitties will get assigned missions, earn prizes,
+        pilot mechs, and much more in future releases. Future features and perks
+        will be integrated with roadmap unlocks.
       </div>
     </div>
     <div class="about-content-wrapper about-img-wrapper-mobile">
