@@ -1,33 +1,141 @@
+<script setup lang="ts">
+  import * as web3 from '@solana/web3.js'
+  import * as anchor from '@project-serum/anchor'
+  import { ref } from 'vue'
+  import {
+    CandyMachine,
+    getCandyMachineState,
+    awaitTransactionSignatureConfirmation,
+    mintOneToken,
+  } from '../candyMachine'
+  import { onMounted, defineProps } from '@vue/runtime-core'
+  import { useAnchorWallet, useWallet } from '@solana/wallet-adapter-vue'
+
+  const props = defineProps({
+    candyMachineId: anchor.web3.PublicKey,
+    treasury: anchor.web3.PublicKey,
+    config: anchor.web3.PublicKey,
+    txTimeout: Number,
+  })
+
+  // eslint-disable-next-line no-unused-vars
+  let connection: web3.Connection | null = null
+  const anchorWallet = useAnchorWallet()
+  const { connected } = useWallet()
+  let isSoldOut = ref(false)
+  let isMinting = ref(false)
+  let isActive = ref(false)
+  //
+  let candyMachine: CandyMachine | undefined
+  let itemsAvailable = ref(0)
+  let itemsRedeemed = ref(0)
+  let itemsRemaining = ref(0)
+  let goLiveDate = ref(0)
+
+  onMounted(() => {
+    connection = connectChain()
+  })
+
+  const connectChain = () => {
+    return new anchor.web3.Connection(process.env.VUE_APP_SOLANA_RPC_HOST!)
+  }
+
+  const refreshCandyMachineState = async () => {
+    try {
+      await getCandyMachineState(
+        anchorWallet.value! as anchor.Wallet,
+        props.candyMachineId,
+        connection!,
+      )?.then((data) => {
+        candyMachine = data?.candyMachine
+        itemsAvailable.value = data?.itemsAvailable!
+        itemsRedeemed.value = data?.itemsRedeemed!
+        itemsRemaining.value = data?.itemsRemaining!
+        goLiveDate.value = data?.goLiveDate!
+
+        isSoldOut.value = itemsRemaining.value === 0
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  const onMint = async () => {
+    await refreshCandyMachineState()
+    try {
+      isMinting.value = true
+      if (anchorWallet.value && candyMachine?.program) {
+        const mintTxId = await mintOneToken(
+          candyMachine,
+          props.config,
+          anchorWallet.value.publicKey,
+          props.treasury,
+        )
+
+        const status = await awaitTransactionSignatureConfirmation(
+          mintTxId,
+          props.txTimeout!,
+          connection!,
+          'singleGossip',
+          false,
+        )
+
+        if (!status?.err) {
+          console.log('MINT SUCCESS')
+        }
+      }
+    } catch (error: any) {
+      // TODO: blech:
+      // eslint-disable-next-line no-unused-vars
+      let message = error.msg || 'Minting failed! Please try again!'
+      if (!error.msg) {
+        // eslint-disable-next-line no-empty
+        if (error.message.indexOf('0x138')) {
+        } else if (error.message.indexOf('0x137')) {
+          message = `SOLD OUT!`
+        } else if (error.message.indexOf('0x135')) {
+          message = `Insufficient funds to mint. Please fund your wallet.`
+        }
+      } else {
+        if (error.code === 311) {
+          message = `SOLD OUT!`
+          isSoldOut.value = true
+        } else if (error.code === 312) {
+          message = `Minting period hasn't started yet.`
+        }
+      }
+    } finally {
+      isMinting.value = false
+      refreshCandyMachineState()
+    }
+  }
+</script>
+
 <template>
   <div class="mint-wrapper">
     <div class="mint-section-wrapper">
       <div class="mint-title">Start Your Journey!</div>
       <div class="mint-text-wrapper">
         <div class="mint-text">
-          <div class="mint-text-title">Mint 1</div>
-          <div class="mint-text-text">.08 ETH</div>
-        </div>
-        <div class="mint-text">
-          <div class="mint-text-title">Mint 3</div>
-          <div class="mint-text-text">.24 ETH</div>
-        </div>
-        <div class="mint-text">
-          <div class="mint-text-title">Mint 5</div>
-          <div class="mint-text-text">.45 ETH</div>
+          <div class="mint-text-title">Mint Price</div>
+          <div class="mint-text-text">.5 SOL</div>
         </div>
       </div>
       <div class="mint-text">
         <div class="mint-text-title minted">0/6666 Minted</div>
       </div>
-      <Mint />
+      <div class="connect-mint-wrapper">
+        <button
+          v-if="connected"
+          :disabled="isSoldOut || isMinting || isActive"
+          @click="onMint"
+        >
+          Mint
+        </button>
+      </div>
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-// eslint-disable-next-line no-unused-vars
-import Mint from "./web3/Mint.vue";
-</script>
 
 <style>
 .mint-wrapper {
@@ -50,6 +158,95 @@ import Mint from "./web3/Mint.vue";
   align-items: center;
   flex-direction: column;
   border-radius: 15px;
+}
+button {
+  position: relative;
+  border: 2px solid #c54ddd;
+  letter-spacing: -1px;
+  color: #d1b7db;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 1px #531f7b;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Press Start 2P", cursive;
+  margin-left: 1em;
+
+  padding: 13px 35px 10px 35px;
+  border-radius: 100px;
+
+  box-shadow: inset 0 -2px 6px 3px #b348cc, 0 -1px 1px rgba(158, 100, 166, 0.5),
+    0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 10px rgba(60, 60, 60, 0.2);
+
+  background-color: rgb(67, 26, 76, 0.5);
+
+  background: linear-gradient(
+      to left,
+      rgba(167, 64, 180, 0.3) 0%,
+      rgba(124, 48, 161, 0.3) 85%,
+      rgba(165, 64, 183, 0.3) 99%
+    ),
+    linear-gradient(
+      to left,
+      rgba(167, 64, 180, 0) 0%,
+      rgba(240, 240, 240, 0) 92%,
+      rgba(240, 240, 240, 0.1) 99%
+    ),
+    linear-gradient(
+      to left,
+      rgba(167, 64, 180, 0.3) 0%,
+      rgba(124, 48, 161, 0.3) 85%,
+      rgba(165, 64, 183, 0.3) 99%
+    ),
+    linear-gradient(
+      to left,
+      rgba(167, 64, 180, 0) 0%,
+      rgba(240, 240, 240, 0) 96%,
+      rgba(240, 240, 240, 0.1) 99%
+    ),
+    linear-gradient(
+      from top,
+      rgba(167, 64, 180, 0) 0%,
+      rgba(124, 48, 161, 1) 75%,
+      rgba(197, 77, 221, 0.7) 95%
+    );
+
+  transition: all 0.337s ease-in-out;
+}
+
+button:before {
+  position: absolute;
+  bottom: -12px;
+  left: 15%;
+  z-index: -1;
+  content: "";
+  height: 50%;
+  width: 70%;
+}
+
+button:after {
+  position: absolute;
+  top: -62.5%;
+  left: -37.5%;
+  z-index: -1;
+  content: " ";
+  height: 225%;
+  width: 175%;
+
+  background: radial-gradient(
+    farthest-corner,
+    ellipse farthest-corner,
+    rgba(83, 20, 121, 0.2) 0%,
+    rgba(0, 0, 0, 1) 75%
+  );
+}
+
+button:hover {
+  color: #fff;
+
+  box-shadow: inset 0 -2px 6px 3px #b348cc, 0 -1px 1px rgba(158, 100, 166, 0.5),
+    0 2px 3px rgba(0, 0, 0, 0.5), 0 2px 3px rgba(67, 26, 76, 0.7),
+    0 0 0 14px rgba(67, 26, 76, 0.3), 0 0 0 8px rgba(67, 26, 76, 0.2);
+
+  background-color: rgba(255, 255, 255, 0.25);
 }
 .mint-title {
   font-family: "Press Start 2P", cursive;

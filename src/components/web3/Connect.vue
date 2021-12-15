@@ -1,10 +1,17 @@
 <template>
   <div class="connect-mint-wrapper">
-    <button>Connect</button>
+    <WalletModalProvider>
+      <WalletMultiButton/>
+    </WalletModalProvider>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import {
+    WalletMultiButton,
+    WalletModalProvider,
+  } from '@solana/wallet-adapter-vue-ui'
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
