@@ -33,7 +33,7 @@ button,
 
   padding: 13px 35px 10px 35px;
   border-radius: 100px !important;
-  font-size: 0.75em !important;
+  font-size: 0.5em !important;
 
   box-shadow: inset 0 -2px 6px 3px #b348cc, 0 -1px 1px rgba(158, 100, 166, 0.5),
     0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 10px rgba(60, 60, 60, 0.2) !important;
