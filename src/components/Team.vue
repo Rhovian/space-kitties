@@ -21,7 +21,7 @@
           <img class="team-img" src="../assets/yoree.png" alt="" />
           <div class="team-text">
             <div class="team-role">Web3</div>
-            <div class="team-name">yoooRE</div>
+            <div class="team-name">Darkveit</div>
           </div>
         </div>
         <div class="team-inner-wrapper">
@@ -128,6 +128,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  z-index: -1;
 }
 /** general media queries */
 @media screen and (min-width: 601px) {

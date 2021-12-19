@@ -4,8 +4,9 @@
       <Connect />
       <div class="navbar-spacer"></div>
       <div class="navbar-socials-wrapper">
-        <img class="icon" src="../assets/discord.svg" alt="" />
-        <img class="icon icon-alternate" src="../assets/twitter.svg" alt="" />
+        <a href="https://discord.gg/fpkXATuucr">
+          <img class="icon" src="../assets/discord.svg" alt="" />
+        </a>
       </div>
     </div>
   </div>
