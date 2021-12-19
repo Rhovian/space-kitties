@@ -19,10 +19,9 @@
         <div class="roadmap-v2-info-wrapper">
           <div class="roadmap-v2-title">Roadmap V2</div>
           <div class="roadmap-v2-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint magnam
-            nemo velit hic mollitia veritatis totam adipisci illum minus error
-            ratione ea, corporis sit tempore dolorum in accusantium nesciunt
-            inventore!
+            The Kitties have scattered around the galaxy and they've meeting up
+            in small groups. They may be plotting for a season 2 they may not,
+            who knows what they will get up to?
           </div>
         </div>
       </div>

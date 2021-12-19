@@ -1,16 +1,16 @@
 <template>
   <div class="connect-mint-wrapper">
     <WalletModalProvider>
-      <WalletMultiButton/>
+      <WalletMultiButton />
     </WalletModalProvider>
   </div>
 </template>
 
 <script setup lang="ts">
-  import {
-    WalletMultiButton,
-    WalletModalProvider,
-  } from '@solana/wallet-adapter-vue-ui'
+import {
+  WalletMultiButton,
+  WalletModalProvider,
+} from "@solana/wallet-adapter-vue-ui";
 </script>
 
 <style>
@@ -19,24 +19,26 @@
 .navbar-wrapper {
   z-index: 20;
 }
-button {
+button,
+.wallet-adapter-button {
   position: relative;
-  border: 2px solid #c54ddd;
-  letter-spacing: -1px;
-  color: #d1b7db;
-  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 1px #531f7b;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-family: "Press Start 2P", cursive;
-  margin-left: 1em;
+  border: 2px solid #c54ddd !important;
+  letter-spacing: -1px !important;
+  color: #d1b7db !important;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 1px #531f7b !important;
+  text-transform: uppercase !important;
+  cursor: pointer !important;
+  font-family: "Press Start 2P", cursive !important;
+  margin-left: 1em !important;
 
   padding: 13px 35px 10px 35px;
-  border-radius: 100px;
+  border-radius: 100px !important;
+  font-size: 0.75em !important;
 
   box-shadow: inset 0 -2px 6px 3px #b348cc, 0 -1px 1px rgba(158, 100, 166, 0.5),
-    0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 10px rgba(60, 60, 60, 0.2);
+    0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 10px rgba(60, 60, 60, 0.2) !important;
 
-  background-color: rgb(67, 26, 76, 0.5);
+  background-color: rgb(67, 26, 76, 0.5) !important;
 
   background: linear-gradient(
       to left,
@@ -67,7 +69,7 @@ button {
       rgba(167, 64, 180, 0) 0%,
       rgba(124, 48, 161, 1) 75%,
       rgba(197, 77, 221, 0.7) 95%
-    );
+    ) !important;
 
   transition: all 0.337s ease-in-out;
 }
@@ -108,9 +110,13 @@ button:hover {
 
   background-color: rgba(255, 255, 255, 0.25);
 }
+.wallet-adapter-button-start-icon {
+  display: none !important;
+}
 @media screen and (min-width: 1000px) {
-  button {
-    font-size: 1.25em;
+  button,
+  .wallet-adapter-button {
+    font-size: 1.25em !important;
     padding: 16px 38px 13px 38px;
   }
   .navbar-wrapper {
@@ -120,7 +126,7 @@ button:hover {
 
 @media screen and (min-width: 1500px) {
   button {
-    font-size: 2em;
+    font-size: 2em !important;
     padding: 16px 38px 13px 38px;
   }
 }

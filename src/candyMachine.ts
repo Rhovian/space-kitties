@@ -1,131 +1,131 @@
-import * as anchor from '@project-serum/anchor'
+import * as anchor from "@project-serum/anchor";
 
-import { MintLayout, TOKEN_PROGRAM_ID, Token } from '@solana/spl-token'
+import { MintLayout, TOKEN_PROGRAM_ID, Token } from "@solana/spl-token";
 
-import { sleep } from './utils'
+import { sleep } from "./utils";
 
 import {
   WalletAdapter,
   MessageSignerWalletAdapter,
   SignerWalletAdapter,
-} from '@solana/wallet-adapter-base'
+} from "@solana/wallet-adapter-base";
 
 export const CANDY_MACHINE_PROGRAM = new anchor.web3.PublicKey(
-  'cndyAnrLdpjq1Ssp1z8xxDsB8dxe7u4HL5Nxi2K5WXZ',
-)
+  "cndyAnrLdpjq1Ssp1z8xxDsB8dxe7u4HL5Nxi2K5WXZ"
+);
 
 const SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID = new anchor.web3.PublicKey(
-  'ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL',
-)
+  "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+);
 
 const TOKEN_METADATA_PROGRAM_ID = new anchor.web3.PublicKey(
-  'metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s',
-)
+  "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s"
+);
 
 export interface CandyMachine {
-  id: anchor.web3.PublicKey
-  connection: anchor.web3.Connection
-  program: anchor.Program
+  id: anchor.web3.PublicKey;
+  connection: anchor.web3.Connection;
+  program: anchor.Program;
 }
 
 export interface CandyMachineState {
-  candyMachine: CandyMachine
-  itemsAvailable: number
-  itemsRedeemed: number
-  itemsRemaining: number
-  goLiveDate: number
+  candyMachine: CandyMachine;
+  itemsAvailable: number;
+  itemsRedeemed: number;
+  itemsRemaining: number;
+  goLiveDate: number;
 }
 
 export const awaitTransactionSignatureConfirmation = async (
   txid: anchor.web3.TransactionSignature,
   timeout: number,
   connection: anchor.web3.Connection,
-  commitment: anchor.web3.Commitment = 'recent',
-  queryStatus: false,
+  commitment: anchor.web3.Commitment = "recent",
+  queryStatus: false
 ): Promise<anchor.web3.SignatureStatus | null | void> => {
-  let done = false
-  let subId = 0
+  let done = false;
+  let subId = 0;
   let status: anchor.web3.SignatureStatus | null | void = {
     slot: 0,
     confirmations: 0,
     err: null,
-  }
+  };
 
   // eslint-disable-next-line no-async-promise-executor
   status = await new Promise(async (resolve, reject) => {
     setTimeout(() => {
-      if (done) return
-      done = true
-      console.log('rejecting for timeout')
-      reject({ timeout: true })
-    }, timeout)
+      if (done) return;
+      done = true;
+      console.log("rejecting for timeout");
+      reject({ timeout: true });
+    }, timeout);
     try {
       subId = connection.onSignature(
         txid,
         (result: any, context: any) => {
-          done = true
+          done = true;
           status = {
             err: result.err,
             slot: context.slot,
             confirmations: 0,
-          }
+          };
           if (result.err) {
-            console.log('rejected via websocket', result.err)
-            reject(status)
+            console.log("rejected via websocket", result.err);
+            reject(status);
           } else {
-            console.log('Resolved via websocket', result)
-            resolve(status)
+            console.log("Resolved via websocket", result);
+            resolve(status);
           }
         },
-        commitment,
-      )
+        commitment
+      );
     } catch (e) {
-      done = true
-      console.error('ws error in setup', txid, e)
+      done = true;
+      console.error("ws error in setup", txid, e);
     }
     while (!done && queryStatus) {
       (async () => {
         try {
           const signatureStatuses = await connection.getSignatureStatuses([
             txid,
-          ])
-          status = signatureStatuses && signatureStatuses.value[0]
+          ]);
+          status = signatureStatuses && signatureStatuses.value[0];
           if (!done) {
             if (!status) {
-              console.log('REST null result for', txid, status)
+              console.log("REST null result for", txid, status);
             } else if (status.err) {
-              console.log('REST err result for', txid, status)
-              done = true
-              reject(status.err)
+              console.log("REST err result for", txid, status);
+              done = true;
+              reject(status.err);
             } else {
-              console.log('REST confirmation for', txid, status)
-              done = true
-              resolve(status)
+              console.log("REST confirmation for", txid, status);
+              done = true;
+              resolve(status);
             }
           }
         } catch (e) {
           if (!done) {
-            console.log('REST connection error', txid, e)
+            console.log("REST connection error", txid, e);
           }
         }
-      })()
-      await sleep(2000)
+      })();
+      await sleep(2000);
     }
-  })
+  });
   // @ts-ignore
   if (connection._signatureSubscriptions[subId]) {
-    connection.removeSignatureListener(subId)
+    connection.removeSignatureListener(subId);
   }
-  done = true
-  console.log('Returning status', status)
-  return status
-}
+  done = true;
+  console.log("Returning status", status);
+  return status;
+};
 
 const createAssociatedTokenAccountInstruction = (
   associatedTokenAddress: anchor.web3.PublicKey,
   payer: anchor.web3.PublicKey,
   walletAddress: anchor.web3.PublicKey,
-  splTokenMintAddress: anchor.web3.PublicKey,
+  splTokenMintAddress: anchor.web3.PublicKey
 ) => {
   const keys = [
     { pubkey: payer, isSigner: true, isWritable: true },
@@ -143,42 +143,41 @@ const createAssociatedTokenAccountInstruction = (
       isSigner: false,
       isWritable: false,
     },
-  ]
+  ];
   return new anchor.web3.TransactionInstruction({
     keys,
     programId: SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID,
     data: Buffer.from([]),
-  })
-}
+  });
+};
 
 export const getCandyMachineState = async (
   anchorWallet: anchor.Wallet,
   candyMachineId: anchor.web3.PublicKey,
-  connection: anchor.web3.Connection,
+  connection: anchor.web3.Connection
 ): Promise<CandyMachineState | null> => {
-  console.log(anchorWallet)
   const provider = new anchor.Provider(connection, anchorWallet, {
-    preflightCommitment: 'recent',
-  })
+    preflightCommitment: "recent",
+  });
 
-  const idl = await anchor.Program.fetchIdl(CANDY_MACHINE_PROGRAM, provider)
+  const idl = await anchor.Program.fetchIdl(CANDY_MACHINE_PROGRAM, provider);
 
   if (idl) {
-    const program = new anchor.Program(idl, CANDY_MACHINE_PROGRAM, provider)
+    const program = new anchor.Program(idl, CANDY_MACHINE_PROGRAM, provider);
 
     const candyMachine = {
       id: candyMachineId,
       connection,
       program,
-    }
+    };
 
-    const state: any = await program.account.candyMachine.fetch(candyMachineId)
+    const state: any = await program.account.candyMachine.fetch(candyMachineId);
 
-    const itemsAvailable = state.data.itemsAvailable.toNumber()
-    const itemsRedeemed = state.itemsRedeemed.toNumber()
-    const itemsRemaining = itemsAvailable - itemsRedeemed
+    const itemsAvailable = state.data.itemsAvailable.toNumber();
+    const itemsRedeemed = state.itemsRedeemed.toNumber();
+    const itemsRemaining = itemsAvailable - itemsRedeemed;
 
-    const goLiveDate = state.data.goLiveDate.toNumber()
+    const goLiveDate = state.data.goLiveDate.toNumber();
 
     return {
       candyMachine,
@@ -186,69 +185,69 @@ export const getCandyMachineState = async (
       itemsRedeemed,
       itemsRemaining,
       goLiveDate,
-    }
+    };
   }
-  return null
-}
+  return null;
+};
 
 const getMasterEdition = async (
-  mint: anchor.web3.PublicKey,
+  mint: anchor.web3.PublicKey
 ): Promise<anchor.web3.PublicKey> => {
   return (
     await anchor.web3.PublicKey.findProgramAddress(
       [
-        Buffer.from('metadata'),
+        Buffer.from("metadata"),
         TOKEN_METADATA_PROGRAM_ID.toBuffer(),
         mint.toBuffer(),
-        Buffer.from('edition'),
+        Buffer.from("edition"),
       ],
-      TOKEN_METADATA_PROGRAM_ID,
+      TOKEN_METADATA_PROGRAM_ID
     )
-  )[0]
-}
+  )[0];
+};
 
 const getMetadata = async (
-  mint: anchor.web3.PublicKey,
+  mint: anchor.web3.PublicKey
 ): Promise<anchor.web3.PublicKey> => {
   return (
     await anchor.web3.PublicKey.findProgramAddress(
       [
-        Buffer.from('metadata'),
+        Buffer.from("metadata"),
         TOKEN_METADATA_PROGRAM_ID.toBuffer(),
         mint.toBuffer(),
       ],
-      TOKEN_METADATA_PROGRAM_ID,
+      TOKEN_METADATA_PROGRAM_ID
     )
-  )[0]
-}
+  )[0];
+};
 
 const getTokenWallet = async (
   wallet: anchor.web3.PublicKey,
-  mint: anchor.web3.PublicKey,
+  mint: anchor.web3.PublicKey
 ) => {
   return (
     await anchor.web3.PublicKey.findProgramAddress(
       [wallet.toBuffer(), TOKEN_PROGRAM_ID.toBuffer(), mint.toBuffer()],
-      SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID,
+      SPL_ASSOCIATED_TOKEN_ACCOUNT_PROGRAM_ID
     )
-  )[0]
-}
+  )[0];
+};
 
 export const mintOneToken = async (
   candyMachine: CandyMachine,
   config: anchor.web3.PublicKey, // feels like this should be part of candyMachine?
   payer: anchor.web3.PublicKey,
-  treasury: anchor.web3.PublicKey,
+  treasury: anchor.web3.PublicKey
 ): Promise<string> => {
-  const mint = anchor.web3.Keypair.generate()
-  const token = await getTokenWallet(payer, mint.publicKey)
-  const { connection, program } = candyMachine
-  const metadata = await getMetadata(mint.publicKey)
-  const masterEdition = await getMasterEdition(mint.publicKey)
+  const mint = anchor.web3.Keypair.generate();
+  const token = await getTokenWallet(payer, mint.publicKey);
+  const { connection, program } = candyMachine;
+  const metadata = await getMetadata(mint.publicKey);
+  const masterEdition = await getMasterEdition(mint.publicKey);
 
   const rent = await connection.getMinimumBalanceForRentExemption(
-    MintLayout.span,
-  )
+    MintLayout.span
+  );
 
   return await program.rpc.mintNft({
     accounts: {
@@ -281,13 +280,13 @@ export const mintOneToken = async (
         mint.publicKey,
         0,
         payer,
-        payer,
+        payer
       ),
       createAssociatedTokenAccountInstruction(
         token,
         payer,
         payer,
-        mint.publicKey,
+        mint.publicKey
       ),
       Token.createMintToInstruction(
         TOKEN_PROGRAM_ID,
@@ -295,8 +294,8 @@ export const mintOneToken = async (
         token,
         payer,
         [],
-        1,
+        1
       ),
     ],
-  })
-}
+  });
+};

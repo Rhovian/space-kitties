@@ -70,8 +70,8 @@
                 </div>
               </div>
               <p>
-                2nd Gen EXODUS release confirmed. Kitties? Pilots?? Mechs???
-                P2E???? Stay tuned!
+                2nd Gen EXODUS release confirmed meow! Kitties? Pilots??
+                Mechs??? Stay tuned!
               </p>
             </div>
           </div>

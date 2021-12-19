@@ -1,114 +1,124 @@
 <script setup lang="ts">
-  import * as web3 from '@solana/web3.js'
-  import * as anchor from '@project-serum/anchor'
-  import { ref } from 'vue'
-  import {
-    CandyMachine,
-    getCandyMachineState,
-    awaitTransactionSignatureConfirmation,
-    mintOneToken,
-  } from '../candyMachine'
-  import { onMounted, defineProps } from '@vue/runtime-core'
-  import { useAnchorWallet, useWallet } from '@solana/wallet-adapter-vue'
+import * as web3 from "@solana/web3.js";
+import * as anchor from "@project-serum/anchor";
+import { ref, watchEffect } from "vue";
+import {
+  CandyMachine,
+  getCandyMachineState,
+  awaitTransactionSignatureConfirmation,
+  mintOneToken,
+} from "../candyMachine";
+import { onMounted, defineProps } from "@vue/runtime-core";
+import { useAnchorWallet, useWallet } from "@solana/wallet-adapter-vue";
+import Connect from "./web3/Connect.vue";
+import { useToast } from "vue-toastification";
 
-  const props = defineProps({
-    candyMachineId: anchor.web3.PublicKey,
-    treasury: anchor.web3.PublicKey,
-    config: anchor.web3.PublicKey,
-    txTimeout: Number,
-  })
+const toast = useToast();
 
-  // eslint-disable-next-line no-unused-vars
-  let connection: web3.Connection | null = null
-  const anchorWallet = useAnchorWallet()
-  const { connected } = useWallet()
-  let isSoldOut = ref(false)
-  let isMinting = ref(false)
-  let isActive = ref(false)
-  //
-  let candyMachine: CandyMachine | undefined
-  let itemsAvailable = ref(0)
-  let itemsRedeemed = ref(0)
-  let itemsRemaining = ref(0)
-  let goLiveDate = ref(0)
+const props = defineProps({
+  candyMachineId: anchor.web3.PublicKey,
+  treasury: anchor.web3.PublicKey,
+  config: anchor.web3.PublicKey,
+  txTimeout: Number,
+});
 
-  onMounted(() => {
-    connection = connectChain()
-  })
+// eslint-disable-next-line no-unused-vars
+let connection: web3.Connection | null = null;
+const anchorWallet = useAnchorWallet();
+const { connected } = useWallet();
+let isSoldOut = ref(false);
+let isMinting = ref(false);
+let isActive = ref(false);
+let candyMachine: CandyMachine | undefined;
+let itemsAvailable = ref(0);
+let itemsRedeemed = ref(0);
+let itemsRemaining = ref(0);
+let goLiveDate = ref(0);
 
-  const connectChain = () => {
-    return new anchor.web3.Connection(process.env.VUE_APP_SOLANA_RPC_HOST!)
+onMounted(() => {
+  connection = connectChain();
+});
+
+const connectChain = () => {
+  return new anchor.web3.Connection(process.env.VUE_APP_SOLANA_RPC_HOST!);
+};
+
+watchEffect(async () => {
+  if (connected.value) {
+    await refreshCandyMachineState();
   }
+});
 
-  const refreshCandyMachineState = async () => {
-    try {
-      await getCandyMachineState(
-        anchorWallet.value! as anchor.Wallet,
-        props.candyMachineId,
+const refreshCandyMachineState = async () => {
+  try {
+    await getCandyMachineState(
+      anchorWallet.value! as anchor.Wallet,
+      props.candyMachineId,
+      connection!
+    )?.then((data) => {
+      candyMachine = data?.candyMachine;
+      itemsAvailable.value = data?.itemsAvailable!;
+      itemsRedeemed.value = data?.itemsRedeemed!;
+      itemsRemaining.value = data?.itemsRemaining!;
+      goLiveDate.value = data?.goLiveDate!;
+
+      isSoldOut.value = itemsRemaining.value === 0;
+    });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+const onMint = async () => {
+  await refreshCandyMachineState();
+  try {
+    isMinting.value = true;
+    if (anchorWallet.value && candyMachine?.program) {
+      const mintTxId = await mintOneToken(
+        candyMachine,
+        props.config,
+        anchorWallet.value.publicKey,
+        props.treasury
+      );
+
+      const status = await awaitTransactionSignatureConfirmation(
+        mintTxId,
+        props.txTimeout!,
         connection!,
-      )?.then((data) => {
-        candyMachine = data?.candyMachine
-        itemsAvailable.value = data?.itemsAvailable!
-        itemsRedeemed.value = data?.itemsRedeemed!
-        itemsRemaining.value = data?.itemsRemaining!
-        goLiveDate.value = data?.goLiveDate!
+        "singleGossip",
+        false
+      );
 
-        isSoldOut.value = itemsRemaining.value === 0
-      })
-    } catch (e) {
-      console.log(e)
-    }
-  }
-
-  const onMint = async () => {
-    await refreshCandyMachineState()
-    try {
-      isMinting.value = true
-      if (anchorWallet.value && candyMachine?.program) {
-        const mintTxId = await mintOneToken(
-          candyMachine,
-          props.config,
-          anchorWallet.value.publicKey,
-          props.treasury,
-        )
-
-        const status = await awaitTransactionSignatureConfirmation(
-          mintTxId,
-          props.txTimeout!,
-          connection!,
-          'singleGossip',
-          false,
-        )
-
-        if (!status?.err) {
-          console.log('MINT SUCCESS')
-        }
+      if (!status?.err) {
+        toast.success("Mint Success!");
       }
-    } catch (error: any) {
-      // TODO: blech:
-      // eslint-disable-next-line no-unused-vars
-      let message = error.msg || 'Minting failed! Please try again!'
-      if (!error.msg) {
-        // eslint-disable-next-line no-empty
-        if (error.message.indexOf('0x138')) {
-        } else if (error.message.indexOf('0x137')) {
-          message = `SOLD OUT!`
-        } else if (error.message.indexOf('0x135')) {
-          message = `Insufficient funds to mint. Please fund your wallet.`
-        }
-      } else {
-        if (error.code === 311) {
-          message = `SOLD OUT!`
-          isSoldOut.value = true
-        } else if (error.code === 312) {
-          message = `Minting period hasn't started yet.`
-        }
-      }
-    } finally {
-      isMinting.value = false
-      refreshCandyMachineState()
     }
+  } catch (error: any) {
+    // TODO: blech:
+    // eslint-disable-next-line no-unused-vars
+    let message = error.msg || "Minting failed! Please try again!";
+    if (!error.msg) {
+      // eslint-disable-next-line no-empty
+      if (error.message.indexOf("0x138")) {
+      } else if (error.message.indexOf("0x137")) {
+        message = `SOLD OUT!`;
+      } else if (error.message.indexOf("0x135")) {
+        message = `Insufficient funds to mint. Please fund your wallet.`;
+      }
+    } else {
+      if (error.code === 311) {
+        message = `SOLD OUT!`;
+        isSoldOut.value = true;
+      } else if (error.code === 312) {
+        message = `Minting period hasn't started yet.`;
+      }
+    }
+    toast.error(message);
+  } finally {
+    isMinting.value = false;
+    refreshCandyMachineState();
   }
+};
 </script>
 
 <template>
@@ -122,7 +132,9 @@
         </div>
       </div>
       <div class="mint-text">
-        <div class="mint-text-title minted">0/6666 Minted</div>
+        <div class="mint-text-title minted">
+          {{ itemsRedeemed }}/6666 Minted
+        </div>
       </div>
       <div class="connect-mint-wrapper">
         <button
@@ -130,8 +142,10 @@
           :disabled="isSoldOut || isMinting || isActive"
           @click="onMint"
         >
-          Mint
+          <div class="loadingSpinner" v-if="isMinting"></div>
+          <div v-else>Mint</div>
         </button>
+        <Connect v-if="!connected" />
       </div>
     </div>
   </div>
@@ -287,6 +301,34 @@ button:hover {
   justify-content: center;
   color: #92d3cd;
 }
+.loadingSpinner {
+  border: 4px solid #fff;
+  border-top-color: rgba(0, 0, 0, 0);
+  border-left-color: rgba(0, 0, 0, 0);
+  width: 20px;
+  height: 20px;
+  opacity: 0.8;
+  border-radius: 50%;
+  animation: loadingSpinner 0.7s infinite linear;
+  -webkit-animation: loadingSpinner 0.7s infinite linear;
+}
+@keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loadingSpinner {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .mint-title {
     font-size: 2em;

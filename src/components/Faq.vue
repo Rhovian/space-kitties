@@ -5,17 +5,10 @@
       <div class="faq-outer-content-wrapper">
         <div class="faq-inner-content-wrapper">
           <h3 class="faq-title title-pink" data-aos="fade-right">
-            What's an NFT?
+            What Is On Your Roadmap?
           </h3>
           <div class="faq-text" data-aos="fade-left">
-            An NFT stands for “Non-fungible token” and is a fancy way of saying
-            it’s a unique, one of a kind digital item that users can buy, own,
-            and trade.
-            <br /><br />
-            Some NFTs main function are to be digital art and look cool, some
-            offer additional utility like exclusive access to websites or
-            participation in an event, think of it like a rare piece of art that
-            can also act as a “members” card.
+            Battlemechs, nuff' said.
           </div>
         </div>
         <div class="faq-inner-content-wrapper">
@@ -23,52 +16,31 @@
             class="faq-title title-purple faq-padding-right"
             data-aos="fade-left"
           >
-            When is the public launch date?
+            How Do I Mint Space Kitties?
           </h3>
           <div class="faq-text" data-aos="fade-right">
-            Public Mint for all will be Dec 12.
+            You probably already did.
           </div>
         </div>
         <div class="faq-inner-content-wrapper">
           <h3 class="faq-title title-pink" data-aos="fade-right">
-            How much will each one cost?
+            What Inspired You To Make This?
           </h3>
           <div class="faq-text" data-aos="fade-left">
-            Each Space Kitty with be 1 Sol.
+            Space Kitties are cute. Space Kitties are good.
           </div>
         </div>
         <div class="faq-inner-content-wrapper">
           <h3 class="faq-title title-pink" data-aos="fade-right">
-            Will there be any special utility?
+            What Rights Do I Have To The Artwork?
           </h3>
           <div class="faq-text" data-aos="fade-left">
-            Your Space Kitty is your passport to the Galactic Kittyverse. Not
-            only does it unlock the airdrop for the Villainverse stat sheet, it
-            will also grant you access to the Den and be a critical part of the
-            upcoming game.
-          </div>
-        </div>
-        <div class="faq-inner-content-wrapper">
-          <h3 class="faq-title title-pink" data-aos="fade-right">
-            Where can I buy a Space Kitty?
-          </h3>
-          <div class="faq-text" data-aos="fade-left">
-            You will only be able to participate in the presale on our official
-            website. After the initial minting process, you will be able to
-            trade your Villains on Solanart and other Platforms. The website
-            will be revealed soon. Stay ready.
-          </div>
-        </div>
-        <div class="faq-inner-content-wrapper">
-          <h3 class="faq-title title-pink" data-aos="fade-right">
-            Who are the Space Kitty Captains?
-          </h3>
-          <div class="faq-text" data-aos="fade-left">
-            We’re a team of nerds who are passionate about crypto, anime, and
-            gaming. We see NFTs as the future of both gaming and IP development
-            and are excited to make our dreams come to life with this project.
-            Make sure to join the Discord for more information on the team’s
-            plans!
+            You are free to do with your Space Kitty as your heart desires.
+            <br />
+            <br />
+            By purchasing a Space Kitty, you are granted full and complete
+            rights to do whatever you want with your NFT and the artwork
+            included, commercially or otherwise.
           </div>
         </div>
       </div>
