@@ -19,7 +19,7 @@
         <div class="roadmap-v2-info-wrapper">
           <div class="roadmap-v2-title">Roadmap V2</div>
           <div class="roadmap-v2-text">
-            The Kitties have scattered around the galaxy and they've meeting up
+            The Kitties have scattered around the galaxy and they're meeting up
             in small groups. They may be plotting for a season 2 they may not,
             who knows what they will get up to?
           </div>
