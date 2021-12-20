@@ -3,12 +3,10 @@
     <div class="about-content-wrapper">
       <h3 class="about-title" data-aos="fade-left">What are Space Kitties?</h3>
       <div class="about-text" data-aos="fade-right">
-        "Space Kitties is a collection of 6666 NFTs - unique digital
-        collectibles that live on the Solana blockchain. Your Space Kitty
-        doubles as a membership pass that grants you access to The Kitty HQ, an
-        exclusive club where Space Kitties will earn prizes, pilot mechs, and
-        much more in future releases. Future features and perks will be
-        integrated with roadmap unlocks."
+        Star crossed with the power of Naisu and Kawaii Space Kitties are 6666
+        fiercely adorable galactic space cats. Approach with cat-ion Space
+        Kitties will blast you before you blink if you stare at them for too
+        long. Do not drop or throw your Space Kitten. Batteries sold separately.
       </div>
     </div>
     <div class="about-content-wrapper about-img-wrapper-mobile">

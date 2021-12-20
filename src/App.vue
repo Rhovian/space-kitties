@@ -38,6 +38,8 @@ import {
   getSolletWallet,
 } from "@solana/wallet-adapter-wallets";
 
+document.title = "Space Kitties";
+
 const wallets = [getPhantomWallet(), getSolletWallet()];
 
 const treasury = new anchor.web3.PublicKey(
