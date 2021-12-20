@@ -21,7 +21,7 @@
           <img class="team-img" src="../assets/yoree.png" alt="" />
           <div class="team-text">
             <div class="team-role">Web3</div>
-            <div class="team-name">Darkveit</div>
+            <div class="team-name">Darkviet</div>
           </div>
         </div>
         <div class="team-inner-wrapper">
